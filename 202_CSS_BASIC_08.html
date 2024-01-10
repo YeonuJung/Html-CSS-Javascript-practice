@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서의 흐름</title>
+    <style>
+      .container {
+        height: 400px;
+        border: 1px solid black;
+      }
+      #first {
+        float: left;
+      }
+      #second {
+        float: right;
+      }
+      p {
+        /* clear: right -> 오른쪽에 있는 float 무시함 */
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img id="first" src="img/puppy_01.jpg" width="160" />
+      <img id="second" src="img/puppy_01.jpg" width="160" />
+      <p>이 강아지는 생성형 AI로 만든 귀여운 닥터입니다.</p>
+      <!-- 이미지는 인라인 왼쪽에서 >> 오른쪽으로 배치 -->
+    </div>
+  </body>
+</html>

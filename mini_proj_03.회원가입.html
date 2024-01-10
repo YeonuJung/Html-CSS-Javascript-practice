@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+    <style>
+        input{
+            width: 320px;
+            height: 30px;
+        }
+        fieldset{
+            width: 330px;
+            margin-bottom: 5px;
+            border-radius: 8px;
+            border-color:ghostwhite;
+            border-width:3px; 
+        }
+        #terms{
+            width: 16px;
+            height: auto;
+            cursor:pointer;
+        }
+        #submit{
+            width: 360px;
+            background-color:#09aa5c;
+            border-radius: 4px;
+            border-style: hidden;
+            margin-top:20px;
+            height: 40px;
+            cursor:pointer;
+        }
+        img{
+            width: 90px;
+            position: relative;
+            right: 10px;
+            bottom: 10px;
+        }
+        select{
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.naver.com" target="_blank"><img src="img/naver_logo.png"></a>
+    <div class="register_form01">
+        <fieldset>
+            <form>
+                <input type="text" id="id" placeholder="아이디" maxlength="12">
+                <hr />
+                <input type="password" id="pw" placeholder="비밀번호" maxlength="12">
+                <hr />
+                <input type="email" id="email" placeholder="비밀번호 분실시 확인용 이메일">
+            </form>
+        </fieldset>
+    </div>
+    <fieldset>
+    <div class="register_form02">
+        <form>
+            <input type="text" id="name" placeholder="이름" >
+            <hr />
+            <input type="text" id="phonenumber" placeholder="휴대전화번호">
+            <hr />
+            <select id="agency">
+                <option selected>통신사 선택</option>
+                <option>KT</option>
+                <option>SKT</option>
+                <option>LG U+</option>
+            </select>
+            <hr />
+            <div class="birth">
+                <select id="yy">
+                <option selected>YY</option>
+                <option>24</option>
+                <option>23</option>
+                <option>22</option>
+                <option>21</option>
+                <option>20</option>
+                <option>19</option>
+                <option>18</option>
+                <option>17</option>
+                <option>16</option>
+                <option>15</option>
+                <option>14</option>
+                <option>13</option>
+                <option>12</option>
+                <option>11</option>
+                <option>10</option>
+                <option>09</option>
+                <option>08</option>
+                <option>07</option>
+                <option>06</option>
+                <option>05</option>
+                <option>04</option>
+                <option>03</option>
+                <option>02</option>
+                <option>01</option>
+                <option>00</option>
+                <option>99</option>
+                <option>98</option>
+                <option>97</option>
+                <option>96</option>
+                <option>95</option>
+                </select>
+                <select id="mm">
+                <option selected>MM</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                </select>
+                <select id="dd">
+                <option selected>DD</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>
+                </select>
+                <hr />
+            </div>
+        </form>
+    </div>
+    </fieldset>
+    <fieldset>
+        <form>
+            <label for="terms"><b>[필수] 인증 약관 전체동의</b></label>
+            <input type="checkbox" id="terms">
+        </form>
+    </fieldset>
+        <form>
+            <button type="submit" id="submit" style="color:white">인증 요청</button>
+        </form>
+</body>
+</html>

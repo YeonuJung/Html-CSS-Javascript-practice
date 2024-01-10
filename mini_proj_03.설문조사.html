@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>설문조사 양식</title>
+  </head>
+  <body>
+    <!-- 개인정보와 같은 민감정보는 마지막에 넣기 -->
+    <header>
+      <h1>설문조사 양식</h1>
+      <p>모든 항목에 빠짐없이 체크해주세요.</p>
+    </header>
+    <hr />
+    <main>
+      <form>
+        <fieldset>
+          <fieldset>
+            <legend>개인정보</legend>
+            <label for="name">성함</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="성함을 입력하세요"
+            />
+            <br />
+            <label for="email">이메일 주소</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="이메일 주소를 써주세요"
+            />
+            <br />
+            <label for="number">휴대폰 번호</label>
+            <input
+              type="number"
+              id="number"
+              name="number"
+              placeholder="번호를 입력하세요"
+            />
+          </fieldset>
+
+          <legend>설문</legend>
+
+          <p>1. 연령대가 어떻게 되십니까?</p>
+          <input type="radio" id="teen" name="age" />
+          <label for="teen">10대</label>
+          <input type="radio" id="twenty" name="age" />
+          <label for="twenty">20대</label>
+          <input type="radio" id="thirty" name="age" />
+          <label for="thirty">30대</label>
+          <input type="radio" id="forty" name="age" />
+          <label for="forty">40대</label>
+          <input type="radio" id="fifty" name="age" />
+          <label for="fifty">50대</label>
+          <input type="radio" id="sixty" name="age" />
+          <label for="sixty">60대</label>
+
+          <p>2. 무슨 프로그래밍 언어를 공부하시고 있나요?(다중선택 가능)</p>
+          <input type="checkbox" id="python" name="programming_language" />
+          <label for="python">파이썬</label>
+          <input type="checkbox" id="react" name="programming_language" />
+          <label for="react">리액트</label>
+          <input type="checkbox" id="java_script" name="programming_language" />
+          <label for="java_script">자바스크립트</label>
+          <input type="checkbox" id="java" name="programming_language" />
+          <label for="java">자바</label>
+          <input type="checkbox" id="c++" name="programming_language" />
+          <label for="c++">c++</label>
+
+          <p>
+            3. 귀하의 MBTI는 어떻게 되시나요?(해당하는 유형을 각각 골라주세요)
+          </p>
+          <input type="radio" id="E" name="Mbti_1st" />
+          <label for="E">외향적</label>
+          <input type="radio" id="I" name="Mbti_1st" />
+          <label for="I">내향적</label>
+          <br />
+          <input type="radio" id="S" name="Mbti_2nd" />
+          <label for="S">감각적</label>
+          <input type="radio" id="N" name="Mbti_2nd" />
+          <label for="N">직관적</label>
+          <br />
+          <input type="radio" id="T" name="Mbti_3rd" />
+          <label for="T">사고적</label>
+          <input type="radio" id="F" name="Mbti_3rd" />
+          <label for="F">감정적</label>
+          <br />
+          <input type="radio" id="J" name="Mbti_4th" />
+          <label for="J">판단적</label>
+          <input type="radio" id="P" name="Mbti_4th" />
+          <label for="P">인식적</label>
+
+          <legend style="margin-top: 15px">기타의견</legend>
+          <fieldset style="height: 60px"></fieldset>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>

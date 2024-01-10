@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상속과 공용키워드</title>
+</head>
+<style>
+    .list{
+        /* 상속 가능: 글자와 관련 있음 */
+        color: red;
+        font-style: italic;
+        font-weight: 900;
+        /* 상속 불가능: 박스모델과 관련 있음 */
+        border: 3px dashed green;
+        padding: 0;
+    }
+
+    ul {
+        border: inherit;
+        padding: inherit;
+    }
+
+    li:nth-child(3) {
+        /* color: initial */
+        color: initial;
+        font-style: initial;
+        font-weight: unset;
+        /* initial: 브라우저가 제공하는 기본값 사용
+           unset: 상속 받을 것 있으면 받고, 없으면 안 받음(제일 많이 씀) */
+    }
+</style>
+<body>
+    <h2>마라톤 대회 참가기록
+    <div class="list">
+        <ul>
+            <li>베를린 마라톤</li>
+            <li>춘천 마라톤</li>
+            <li>서울 마라톤</li>
+            <li>강남 마라톤</li>
+            <li>도쿄 마라톤</li>
+        </ul>
+    </h2>
+    </div>
+</body>
+</html>
