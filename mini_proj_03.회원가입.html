@@ -1,75 +1,56 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>회원가입 페이지</title>
-    <style>
-        input{
-            width: 320px;
-            height: 30px;
-        }
-        fieldset{
-            width: 330px;
-            margin-bottom: 5px;
-            border-radius: 8px;
-            border-color:ghostwhite;
-            border-width:3px; 
-        }
-        #terms{
-            width: 16px;
-            height: auto;
-            cursor:pointer;
-        }
-        #submit{
-            width: 360px;
-            background-color:#09aa5c;
-            border-radius: 4px;
-            border-style: hidden;
-            margin-top:20px;
-            height: 40px;
-            cursor:pointer;
-        }
-        img{
-            width: 90px;
-            position: relative;
-            right: 10px;
-            bottom: 10px;
-        }
-        select{
-            cursor:pointer;
-        }
-    </style>
-</head>
-<body>
-    <a href="https://www.naver.com" target="_blank"><img src="img/naver_logo.png"></a>
-    <div class="register_form01">
+    <link rel="stylesheet" href="회원가입.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo-box">
+      <div class="logo">
+        <a href="https://www.naver.com" target="_blank"
+          ><img src="img/naver_logo.png"
+        /></a>
+      </div>
+      </div>
+      <div class="register_form01">
         <fieldset>
-            <form>
-                <input type="text" id="id" placeholder="아이디" maxlength="12">
-                <hr />
-                <input type="password" id="pw" placeholder="비밀번호" maxlength="12">
-                <hr />
-                <input type="email" id="email" placeholder="비밀번호 분실시 확인용 이메일">
-            </form>
-        </fieldset>
-    </div>
-    <fieldset>
-    <div class="register_form02">
-        <form>
-            <input type="text" id="name" placeholder="이름" >
+          <form>
+            <input type="text" id="id" placeholder="아이디" maxlength="12" />
             <hr />
-            <input type="text" id="phonenumber" placeholder="휴대전화번호">
+            <input
+              type="password"
+              id="pw"
+              placeholder="비밀번호"
+              maxlength="12"
+            />
+            <hr />
+            <input
+              type="email"
+              id="email"
+              placeholder="비밀번호 분실시 확인용 이메일"
+            />
+          </form>
+        </fieldset>
+      </div>
+      <div class="register_form02">
+        <fieldset>
+          <form>
+            <input type="text" id="name" placeholder="이름" />
+            <hr />
+            <input type="text" id="phonenumber" placeholder="휴대전화번호" />
             <hr />
             <select id="agency">
-                <option selected>통신사 선택</option>
-                <option>KT</option>
-                <option>SKT</option>
-                <option>LG U+</option>
+              <option selected>통신사 선택</option>
+              <option>KT</option>
+              <option>SKT</option>
+              <option>LG U+</option>
             </select>
             <hr />
             <div class="birth">
-                <select id="yy">
+              <select id="yy">
                 <option selected>YY</option>
                 <option>24</option>
                 <option>23</option>
@@ -101,8 +82,8 @@
                 <option>97</option>
                 <option>96</option>
                 <option>95</option>
-                </select>
-                <select id="mm">
+              </select>
+              <select id="mm">
                 <option selected>MM</option>
                 <option>01</option>
                 <option>02</option>
@@ -116,8 +97,8 @@
                 <option>10</option>
                 <option>11</option>
                 <option>12</option>
-                </select>
-                <select id="dd">
+              </select>
+              <select id="dd">
                 <option selected>DD</option>
                 <option>01</option>
                 <option>02</option>
@@ -150,20 +131,25 @@
                 <option>29</option>
                 <option>30</option>
                 <option>31</option>
-                </select>
-                <hr />
+              </select>
+              <hr />
             </div>
-        </form>
-    </div>
-    </fieldset>
-    <fieldset>
-        <form>
+          </form>
+        </fieldset>
+      </div>
+      <div class="terms-box">
+        <fieldset>
+          <form>
             <label for="terms"><b>[필수] 인증 약관 전체동의</b></label>
-            <input type="checkbox" id="terms">
-        </form>
-    </fieldset>
+            <input type="checkbox" id="terms" checked/>
+          </form>
+        </fieldset>
         <form>
-            <button type="submit" id="submit" style="color:white">인증 요청</button>
+          <button type="submit" id="submit" style="color: white">
+            인증 요청
+          </button>
         </form>
-</body>
+      </div>
+    </div>
+  </body>
 </html>

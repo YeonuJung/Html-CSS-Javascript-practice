@@ -12,6 +12,7 @@
 }
 .wrap {
   background-color: #a8c0d6;
+  border-radius: 10px;
 }
 
 .chat {
@@ -39,11 +40,10 @@
   border-radius: 10px;
   font-size: 18px;
 }
-.ch2 > .text-box {
+.ch2  .text-box {
   background-color: #f9eb54;
   width: 300px;
   position: relative;
-  right: 8px;
   padding-right: 8px;
   text-align: right;
 }
@@ -59,6 +59,7 @@
   height: 100px;
   display: flex;
   flex-direction: row-reverse;
+  margin-top: 15px;
 }
 .chat_area {
   width: 100%;
@@ -70,19 +71,37 @@ textarea {
   padding: 0px;
   border-style: solid;
   border-width: 2px;
-  border-color: black
+  border-color: #9f9e9e;
+  border-radius: 10px;
 }
-.chat_bt {
+.read_check{ 
+  color:#f9eb54;
+  align-self: flex-end;
+}
+.text-box-flex{
+  display: flex;
+}
+.text-box-flex2{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.text-box-tail{
   border-style: solid;
-  border-color: black;
-  border-width: 2px;
-  border-bottom-width: 2px;
-  border-left-style: hidden;
-  height: 100%;
+  border-width: 12px;
+  border-color: transparent;
+  height: 0;
+  width: 0;
+  border-right-color:#ddd;
+  align-self: center;
 }
-.read_check{
-position: relative;
-top: 35px;
-right: 8px;
-color: yellow;
+.text-box-tail2{
+  border-style: solid;
+  border-width: 12px;
+  border-color: transparent;
+  height: 0;
+  width: 0;
+  border-left-color:#f9eb54;
+  align-self: center;
 }
+
+
