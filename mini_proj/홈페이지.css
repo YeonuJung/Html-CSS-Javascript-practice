@@ -72,6 +72,7 @@ section{
 .menu_bar a{
     color:#e4ad5a;
     text-decoration: none;
+    transition: 1.2s;
 }
 a:hover{
     color: whitesmoke;
@@ -155,9 +156,11 @@ a:hover{
 	font-weight:bold;
 	padding:32px 76px;
 	text-decoration:none;
+    transition: background-color 2s;
 }
 .inquires_button a:hover{
     color:white;
+    background-color:bisque ;
 }
 .facility_look_container{
     display: flex;
