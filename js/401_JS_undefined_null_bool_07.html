@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>undefined_null_bool</title>
+  </head>
+  <body>
+    <script>
+      let name;
+      console.log(name);
+      //undefined -> 값의 정의되지 않음
+
+      name = "연우";
+      console.log(name); // 연우 출력됨
+
+      name = null;
+      console.log(name); //null 반환됨
+
+      console.log(prompt("연우"));
+      //확인 버튼 -> 아무 것도 출력 안됨
+      //취소 버튼 -> null 출력됨
+
+      //불리안(boolean)
+      console.log(true);
+      console.log(false);
+
+      //console.log(True) 에러 발생
+      //console.log(False) 에러 발생
+
+      console.log(typeof true);
+      console.log(typeof false);
+
+      //confirm()-> 확인
+      
+      let answer = confirm("당신은 기분이 좋나요")
+      console.log(answer);
+
+    //확인 버튼 -> true
+    //취소 버튼 -> false
+
+    console.log(`현재 당신은 기분이 좋나요? ${answer}`)
+    console.log(`재밌죠? ${answer}`)
+    </script>
+  </body>
+</html>

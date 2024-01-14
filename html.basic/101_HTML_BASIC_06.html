@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력을 받자</title>
+  </head>
+  <body>
+    <h1>로그인 해주세요.</h1>
+    <label>
+      아이디
+      <input type="text" placeholder="아이디 입력창" />
+    </label>
+    <br />
+    <label for="pw"> 비밀번호</label>
+    <input type="password" id="pw" placeholder="비밀번호 입력창" />
+    <!--id가 "pw" 인 라벨(label)임-->
+
+    <hr />
+    <fieldset>
+      <legend>식음료 주문 메뉴</legend>
+      <h2>식음료를 고르세요.</h2>
+      <select>
+        <option>커피</option>
+        <option>제로콜라</option>
+        <option>아이스티</option>
+        <option>밀크티</option>
+      </select>
+      <br />
+      <select>
+        <option value="gamjatang">감자탕</option>
+        <option value selected="kimbab">김밥</option>
+        <!-- selected는 최우선 노출되는 값-->
+        <option value="donkatsu">돈까스</option>
+        <option value="bone_haejang">뼈해장국</option>
+      </select>
+      <br />
+      <select multiple size="2">
+        <option value="coffee">커피</option>
+        <option value=" zero_coke">제로콜라</option>
+        <option value="ice_tea">아이스티</option>
+        <option value="milk_tea">밀크티</option>
+        <!-- multiple은 옵션 여러개를 보여줄 때 사용, size =2 -> 기본적으로 2개 보여줘-->
+      </select>
+
+      <h2>기타 음료를 원하시면 자유롭게 써주세요.</h2>
+      <textarea cols="30" row="10"> </textarea>
+    </fieldset>
+    <h2>우리의 주문 상태는 아래와 같습니다.</h2>
+    <progress max="100" value="80"></progress>
+    <hr />
+    <h2>추가 용무가 필요하시면 호출해 주세요.</h2>
+    <button>호출</button>
+    <br />
+    <input type="button" value="긴급 호출" />
+
+    <!-- cols 열의 가로길이, rows 행의 세로길이-->
+  </body>
+</html>
+<!--placeholder 입력창에 고정시켜서 정보 알려주는 역할-->

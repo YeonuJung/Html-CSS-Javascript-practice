@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>템플릿리터럴</title>
+  </head>
+  <body>
+    <script>
+      const dog = "강아지";
+      const cat = "고양이";
+
+      console.log(dog);
+      console.log(cat);
+
+      console.log(typeof dog);
+      //문자string 인식됨
+      console.log(dog + cat);
+
+      //데이터 삽입하기
+      const modifier = "귀여운";
+      const cuteDog = `${modifier} ${dog} 좋아`;
+
+      console.log(modifier);
+      console.log(cuteDog);
+
+      prompt("좋아하는 동물은?");
+      const prettyDog = `${modifier} ${dog}`;
+      console.log(prettyDog);
+
+      const prettyCat = `${modifier} ${cat}`;
+      console.log(prettyCat);
+
+      console.log(`${prettyDog}, ${prettyDog}`);
+
+      console.log(`${"좋아하는 동물은?"}`);
+
+      const cuteAni= `${modifier} ${prompt("좋아하는 동물은?")}`
+      console.log(cuteAni)
+
+    </script>
+  </body>
+</html>

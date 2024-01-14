@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>색 지정하기</title>
+    <style>
+        html {
+            font-size: 15px;
+        }
+        body {
+            font-size: 40px;
+            text-align: right;
+        }
+        p#one{
+            color:rgb(100%, 0%, 0%);
+            font-size: 30px;
+            font-weight:900;
+            /* 100~900사이 두께지정 */
+            line-height: 16px;
+            text-align: center
+            /* 정렬 left right center justify(양끝 정렬) */
+        }
+        p#two{
+            color: rgb(0%, 100%, 0%, 0.5);
+            /* r은 빨강 g는 초록 b는 검정 
+            0.5 자리는 opacity로 투명도를 의미 */
+            font-size : 0.5em;
+            /* em은 부모요소의 글자크기를 배율로 해서 크기조절 */
+            text-align: right
+        }
+        p#three{
+            color: hsl(300, 100%, 0%);
+            text-align: justify;
+        /*  hsl h는 색조 360각도로 색상의 정도를 표현 0 ->빨 120 ->초 240 ->파
+                s는 채도로 색의 선명도(0%회색 ~~100%원색)
+                l은 밝기를 퍼센트 수치로 나타냄 100% = 흰색  */
+
+        }
+        p#four{
+            color: hsl(200, 50%, 20%);
+            font-size: 3rem;
+        /* rem은 루트요소(문서의 시작, 즉 html 태그)의 글자크기를 배수로 하여 계산 */
+        }
+    </style>
+</head>
+<body>
+    <p id="one">고소한 아몬드와 함께 하는 여정</p>
+    <p id="two">고소한 아몬드와 함께 하는 여정</p>
+    <p id="three">고소한 아몬드와 함께 하는 여정</p>
+    <p id="four">고소한 아몬드와 함께 하는 여정</p>
+</body>
+</html>
