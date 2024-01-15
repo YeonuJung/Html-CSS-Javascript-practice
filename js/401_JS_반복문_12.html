@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+</head>
+<body>
+    <!-- for문 초조반 -> 초기식 조건식 반복식 -->
+    <script>
+      /*  for(let i=0; i<8; i+=1){
+            document.write("반복중<br/>")
+        }
+        */
+        
+        for(let i=0; i<5; i = i + 1){
+            document.write(`현재 ${i + 1}반복중`)
+        }
+        //JS는 INDEX가 0부터 시작하니깐 0, 1, 2, 3, 4 -> 5번 
+
+        let i = 0; //초기값 설정
+        while(i < 8){ //조건
+            document.write(`반복중.....현재 ${i+1}번째!`)
+            i += 1 //정지조건(반드시 필요 아니면 무한반복)
+        }
+    </script>
+</body>
+</html>
