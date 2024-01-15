@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>짧은 과제</title>
+</head>
+<body>
+    <h1 id="name"></h1>
+    <p id="teacher"></p>
+    <p id="food"></p>
+
+    <script>
+       const nameElement = document.querySelector("#name")
+       let name = prompt("이름이 어떻게 되세요?")
+       nameElement.textContent = `제 이름은 ${name}입니다.`
+       const teacherElement = document.querySelector("#teacher")
+       let teacher = prompt("최애 강사가 누구에요?")
+       teacherElement.textContent = `제 최애 강사는 ${teacher}입니다.`
+       const foodElement = document.querySelector("#food")
+       let food = prompt("회식 때 먹고 싶은 안주는?")
+       foodElement.textContent = `회식 때 먹고 싶은 안주는 ${food}입니다.`
+    </script>
+</body>
+</html>
