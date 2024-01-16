@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>if, switch실습</title>
+  </head>
+  <body>
+    <script>
+      // let tem = prompt("물의 온도를 입력하세요")
+      // tem = parseInt(tem);
+      // if(tem >= 100){
+      //     document.write("기체 상태")
+      // }
+      // else if(0 < tem < 100){
+      //     document.write("액체 상태")
+      // }
+      // else{
+      //     document.write ("고체 상태")
+      // }
+
+      // let num = prompt("숫자를 입력하세요");
+      // if (num > 0) {
+      //   if (num % 2 === 0) {
+      //     document.write("0보다 큰 짝수");
+      //   } else if (num % 2 === 1) {
+      //     document.write("0보다 큰 홀수");
+      //   } else {
+      //     document.write("0보다 작거나 같은 수");
+      //   }
+      // }
+
+      let fruits = prompt("어떤 과일을 사시겠습니까?");
+      let price = 0;
+
+      switch (fruits) {
+        case "바나나":
+          price = 200; 
+          break;
+        case "사과":
+          price = 300;
+          break;
+        case "체리":
+          price = 400;
+          break;
+        default:
+          document.write("팔지 않습니다.");
+          price = 0;
+      }
+      document.write(fruits + "는" + " " + price + "원입니다.");
+
+      //case 문은 case 자리에 변수나 식 사용불가.
+
+      //break 문
+
+      let day = prompt("제가 일하는 날을 맞춰보실래요?");
+
+      switch (day) {
+        case "월요일":
+          document.write("true");
+          break;
+        case "화요일":
+          document.write("true");
+          break;
+        case "수요일":
+          document.write("true");
+          break;
+        case "목요일":
+          document.write("true");
+          break;
+        case "금요일":
+          document.write("true");
+          break;
+        case "토요일":
+          document.write("true");
+          break;
+        case "일요일":
+          document.write("false");
+          break;
+      }
+      let menu = prompt("주문해주세요!");
+      let price1 = 0;
+      switch (menu) {
+        case "에스프레소":
+        case "espresso":
+          price1 = "2000";
+          break;
+        case "카푸치노":
+          price1 = "3000";
+          break;
+        case "카페라떼":
+          price1 = "4000";
+          break;
+        default:
+          document.write(`${menu}는 없습니다`);
+          
+      }
+      //if로 제약조건을 걸어주는게 명확해짐. 왜냐하면 위에 가격이 0원으로 설정되어있기 때문에.
+      if(price1 != 0){
+        document.write(menu + "는 " + price1 + "원입니다.")
+      }
+    </script>
+  </body>
+</html>

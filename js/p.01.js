@@ -127,5 +127,12 @@ console.log(인사.charAt(3));
  console.log("HELLO THERE, HOW ARE YOU DOING?".toLowerCase()) 
 
  
- 
+ /*조건문 if(조건){
+    조건 만족하면 실행할 코드
+    }  */
 
+ /*switch문 switch(조건){
+    case 값: 코드1
+            break; 
+    }
+*/
