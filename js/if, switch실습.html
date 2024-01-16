@@ -44,35 +44,39 @@
           price = 400;
           break;
         default:
-          document.write("팔지 않습니다.");
-          price = 0;
+          document.write("죄송하지만 ");
       }
-      document.write(fruits + "는" + " " + price + "원입니다.");
+      if(price == 0){
+        document.write(fruits + "는 팔지 않습니다!")
+      }
+      else{
+      document.write(fruits + "는" + " " + price + "원입니다.")
+      }
 
       //case 문은 case 자리에 변수나 식 사용불가.
 
       //break 문
 
-      let day = prompt("제가 일하는 날을 맞춰보실래요?");
+      let day = prompt("Tuesday가 한국말로 뭘까요?");
 
       switch (day) {
         case "월요일":
-          document.write("true");
+          document.write("false");
           break;
         case "화요일":
           document.write("true");
           break;
         case "수요일":
-          document.write("true");
+          document.write("false");
           break;
         case "목요일":
-          document.write("true");
+          document.write("false");
           break;
         case "금요일":
-          document.write("true");
+          document.write("false");
           break;
         case "토요일":
-          document.write("true");
+          document.write("false");
           break;
         case "일요일":
           document.write("false");
@@ -93,7 +97,8 @@
           break;
         default:
           document.write(`${menu}는 없습니다`);
-          
+          //    템플릿 리터럴 말고 이렇게도 가능함 
+          // -> document.write(menu + "는 없습니다")
       }
       //if로 제약조건을 걸어주는게 명확해짐. 왜냐하면 위에 가격이 0원으로 설정되어있기 때문에.
       if(price1 != 0){

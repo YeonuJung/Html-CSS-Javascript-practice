@@ -24,12 +24,12 @@ const는 변수 덮어쓰기 불가 */
 
 //단 객체, 배열, 함수의 데이터를 바꿀 수 있음.
 //객체
-const val4 = {
+/* const val4 = {
     name: "igo"
 }
 console.log(val4)
 val4.name = "igo2"
-console.log(val4)
+console.log(val4) */
 
 //배열
 const animal = ["dog", "cat", "bird"]
