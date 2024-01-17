@@ -46,6 +46,26 @@
     //   document.write("당신의 비밀번호 : " + password + "<br/>")
     //   document.write("비밀번호의 안정성은 " + passwordSta + "입니다.")
 
+        let firstNum = parseInt(prompt("첫 번째 숫자를 입력하세요"))
+        let SecondNum = parseInt(prompt("두 번째 숫자를 입력하세요"))
+
+        if(firstNum > SecondNum){
+            if(firstNum % 2 == 0){
+                document.write(firstNum + "이 큰 수 이고, 짝수이다.")
+            }
+            else{
+                document.write(firstNum + "이 큰 수 이고, 홀수이다")
+            }
+        }
+        else{
+            if(SecondNum % 2 == 0){
+                document.write(SecondNum + "이 큰 수 이고, 홀수이다")
+            }
+            else{
+                document.write(SecondNum + "이 큰 수 이고, 짝수이다")
+            }
+        }
+
     </script>
   </body>
 </html>
