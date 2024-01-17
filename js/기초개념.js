@@ -136,3 +136,29 @@ console.log(인사.charAt(3));
             break; 
     }
 */
+
+//반복문 (for문, while문, do while문)
+/* for(초기문; 조건식; 반복 후 작업;){
+   조건이 true일 때 실행시킬 코드(작업문) 
+}
+초기문은 최초 한번만 실행, 순서는 초기문 -> 조건식 확인 -> 작업문 -> 반복 후 작업
+ */
+for(var i = 0; i < 10; i++){
+   console.log(i);
+}
+//중첩 for문 
+for(var i = 0; i < 5; i++){
+   for(var j = 0; j<10; j++){
+      console.log(`집에갈까 ${j}번째 고민중`);
+   }
+}
+/*while(조건){
+조건이 true일 때 실행시킬 코드(작업문)
+}
+반복 횟수를 알 수 없는 경우 주로 사용!
+*/
+var i = 0;
+while(i < 10){
+   console.log(i)
+   i++
+}
