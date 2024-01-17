@@ -53,4 +53,5 @@ console.log("hello, javascript!".toUpperCase());
 console.log("HELLO, JAVASCRIPT!".toLowerCase());
 
 var str = "a,b,c,d,e,f";
+console.log(str.split(","));
 console.log(str[2]);

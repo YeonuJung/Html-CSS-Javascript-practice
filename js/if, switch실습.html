@@ -104,6 +104,32 @@
       if(price1 != 0){
         document.write(menu + "는 " + price1 + "원입니다.")
       }
+
+      var Day = prompt("요일을 입력하세요")
+      switch(Day){
+        case "월":
+          document.write("Monday")
+          break;
+        case "화":
+          document.write("Tuesday")
+          break;
+        case "수":
+          document.write("Wednesday")
+          break;
+        case "목":
+          document.write("Thursday")
+          break;
+        case "금":
+          document.write("Friday")
+          break;
+        case "토":
+          document.write("Saturday") 
+          break;
+        case "일":
+          document.write("Sunday")
+          break;
+          default: document.write(Day + "는 요일이 아닙니다.")
+      }
     </script>
   </body>
 </html>
