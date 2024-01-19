@@ -7,7 +7,8 @@
   </head>
   <body>
     <script>
-      /* let tem = [15.1, 15.4, 16.1, 17.5, 19.2, 21.4];
+      /* 
+      let tem = [15.1, 15.4, 16.1, 17.5, 19.2, 21.4];
       let sumTem = 0;
       for (i = 0; i < tem.length; i++){
         sumTem += tem[i];
@@ -29,7 +30,8 @@
       document.write(" 합계 : " + sumMoney);
     */
 
-      /* var score = []
+      /* 
+    var score = []
     sum = 0;
     score[0] = Math.floor(Math.random() * 101)
     score[1] = Math.floor(Math.random() * 101)
@@ -47,7 +49,8 @@
      document.write("score 평균 출력 <br>" + average)
      */
 
-      /*  var itemlist = ["라면", "계란", "물", "파"];
+      /*
+        var itemlist = ["라면", "계란", "물", "파"];
         document.write("<h1>라면을 만드는데 필요한 재료</h1><hr>");
         document.write("<Ul>");
         for (i = 0; i < itemlist.length; i++) {
@@ -58,6 +61,7 @@
         document.write("</ul>");
       */
 
+      /*
       var numbers = [20, 5, 8, 15, 20];
       for (i = 0; i < numbers.length; i++){
         for(j = 0; j <= numbers[i]; j++){
@@ -65,6 +69,101 @@
         }
         document.write(numbers[i] + "<br/>");
       }
+      */
+
+      /*
+      var 메뉴추천 = ["부대찌개 어떠세요?","오늘은 치킨이죠~","중국집 어떠세요?","느낌있게 파스타 어때요?"]
+      var 랜덤 = (Math.random() * 4)
+      document.write("메뉴 추천좀 부탁해 컴퓨터야 <hr>")
+      document.write(메뉴추천[Math.floor(랜덤)])
+      */
+
+     /* 
+      var 색상목록 = ["푸른", "붉은", "검은", "하얀"]
+      var 자연목록 = ["늑대", "태양", "독수리", "바람"]
+      var 단어목록 = ["눈물", "환생", "기상", "일격", "유령"];
+
+      var 색상 = 색상목록[Math.floor(Math.random() * 4)]
+      var 자연 = 자연목록[Math.floor(Math.random() * 4)]
+      var 단어 = 단어목록[Math.floor(Math.random() * 5)]
+
+      document.write("<h1>인디언 이름 제조기</h1>" + "<br>")
+      document.write(색상 + 자연 + 단어)
+      */
+
+     /* 
+      var skills = ["HTML", "CSS", "Javascript"]
+      if(skills.includes("Javascript" && "React")){
+        document.write("합격!")
+      }
+      else if(skills.includes("Javascript" || "React")){
+        document.write("예비")
+      }
+      else{
+        document.write("탈락")
+      }
+      */
+      /*
+      var scoreOf5 = [];
+      var score = 0;
+      var stuNum = 0;
+      for(var i = 0; i < 5; i++){
+        score = parseInt((prompt("1번 부터 5번까지 학생의 점수를 입력하세요")))
+        scoreOf5.push(score)
+        stuNum = i + 1
+        if(scoreOf5[i] > 60){
+          document.write(stuNum + "번 학생 " + scoreOf5[i] + "점, 합격입니다.<br/>")
+        }
+        else{
+          document.write(stuNum + "번 학생 " + scoreOf5[i] + "점, 불합격입니다.<br/>")
+        }
+      }
+      */
+
+     /*
+     var scoreOf5 = [];
+     var score = 0;
+     var maxScore = 0;
+     var minScore = 100;
+      for(var i = 0; i < 5; i++){
+      score = parseInt(prompt("학생의 점수를 입력해주세요"))
+      scoreOf5.push(score)
+      
+      if(maxScore < score){
+        maxScore = score;
+      }
+
+      if(minScore > score){
+        minScore = score;
+      }
+    }
+
+      document.write("입력한 점수 : " + scoreOf5.join() + "<hr>")
+      document.write(" 최고 점수 : " + maxScore)
+      document.write("최저 점수 : " + minScore + "<hr>")
+    */
+
+   /* var totalLottoNum = []
+    var num = 0;
+    var random = 0;
+    var firstNum = []
+
+    for(i = 1; i < 46; i++){
+      num = i
+      totalLottoNum.push(num)
+    }
+
+    document.write("<h1>로또 1등 당첨 번호</hr>" + "<br>")
+      // +1 안하면 0이 나오기 때문에 이 부분 고려해주어야 함.
+   
+      for(j = 0; j < 6; j++){
+      random = totalLottoNum[Math.floor(Math.random() * 45)] + 1
+      firstNum.push(random)
+      }
+    document.write(firstNum.join())
+    */  
+  
+   
     </script>
   </body>
 </html>
