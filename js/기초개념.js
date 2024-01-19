@@ -162,3 +162,48 @@ while(i < 10){
    console.log(i)
    i++
 }
+
+//배열 -> 데이터 값을 하나의 목록으로 생성, []로 묶고 ,로 구분, 안에 있는 값은 원소라고 부름
+var 과일Top3 = ["딸기", "망고스틴",["사과", "오렌지", "레몬"], "수박"]
+console.log(과일Top3)
+console.log(과일Top3[2])
+과일Top3[0] = "포도"
+console.log(과일Top3)
+과일Top3[30] = "귤"
+console.log(과일Top3)
+console.log(과일Top3[2][0])
+console.log(과일Top3.length)
+var 우유 = ["딸기", "바나나", "초코"]
+for(i = 0; i < 우유.length; i++){
+   console.log(우유[i])
+}
+// length 메소드 -> 개수 구할 수 있음
+// for문에서 응용하면 조건에 배열.length해서 범위 조절할 수 있음
+// push 메소드 -> 배열에 원소 추가할 때 .push(추가할 데이터)  --> 인덱스 맨 뒤로 들어간다.
+// unshift 메소드 -> 배열에 원소 추가할 때 .unshift(추가할 데이터 ---> 인덱스 맨 앞에 들어간다.)
+
+우유.push("커피")
+console.log(우유)
+우유.unshift("메론")
+console.log(우유)
+
+//pop 메소드 -> 마지막 원소를 제거 
+//shift 메소드 -> 첫번째 원소를 제거
+
+우유.pop()
+console.log(우유);
+우유.shift();
+console.log(우유);
+
+//배열 결합하기 -> 첫 번째 배열.concat(두 번째 배열)
+//여러 배열 결합 -> 결합하려는 배열을 차례로 괄호 안에 넣고 쉼표로 구분
+
+var 포유류 = ["강아지", "고양이", "소"]
+var 파충류 = ["비어디드래곤", "나일모니터", "카멜레온"]
+var 조류 = ["앵무새", "독수리", "매"]
+var 포유류파충류 = 포유류.concat(파충류)
+console.log(포유류파충류)
+console.log(포유류)
+console.log(파충류)
+var 모든동물 = 포유류.concat(파충류, 조류)
+console.log(모든동물)

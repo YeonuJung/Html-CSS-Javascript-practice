@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열실습</title>
+  </head>
+  <body>
+    <script>
+      /* let tem = [15.1, 15.4, 16.1, 17.5, 19.2, 21.4];
+      let sumTem = 0;
+      for (i = 0; i < tem.length; i++){
+        sumTem += tem[i];
+      }
+      averageTem = sumTem / tem.length;
+      document.write("평균 온도는 " + averageTem);
+      document.write("<br>")
+
+
+      let money = [];
+      let sumMoney = 0;
+      money[0] = 5000;
+      money[1] = 10000;
+      money[2] = 30000;
+      for(i = 0; i < money.length; i++){
+        sumMoney += money[i]
+      }
+      document.write("배열 money 출력 : " + money)
+      document.write(" 합계 : " + sumMoney);
+    */
+
+      /* var score = []
+    sum = 0;
+    score[0] = Math.floor(Math.random() * 101)
+    score[1] = Math.floor(Math.random() * 101)
+    score[2] = Math.floor(Math.random() * 101)
+    score[3] = Math.floor(Math.random() * 101)
+    score[4] = Math.floor(Math.random() * 101)
+    for(i=0; i<score.length; i++){
+        sum += score[i]
+    }
+     var average = sum / score.length
+     document.write("배열 score 출력 <br>" + score)
+     document.write("<hr>")
+     document.write("score 합계 출력 <br>" + sum)
+     document.write("<hr>")
+     document.write("score 평균 출력 <br>" + average)
+     */
+
+      /*  var itemlist = ["라면", "계란", "물", "파"];
+        document.write("<h1>라면을 만드는데 필요한 재료</h1><hr>");
+        document.write("<Ul>");
+        for (i = 0; i < itemlist.length; i++) {
+        document.write("<li>");
+        document.write(itemlist[i]);
+        document.write("</li>");
+      }
+        document.write("</ul>");
+      */
+
+      var numbers = [20, 5, 8, 15, 20];
+      for (i = 0; i < numbers.length; i++){
+        for(j = 0; j <= numbers[i]; j++){
+            document.write("*")
+        }
+        document.write(numbers[i] + "<br/>");
+      }
+    </script>
+  </body>
+</html>

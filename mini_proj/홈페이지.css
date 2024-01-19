@@ -237,7 +237,7 @@ a:hover{
     justify-content: space-around;
     column-gap: 30px;
 }
-.footer_info_list :nth-child(1){
+.footer_info_list:nth-child(1){
     position: relative;
     top: 2px;
 ;
