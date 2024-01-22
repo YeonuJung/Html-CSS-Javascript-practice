@@ -4,19 +4,19 @@ console.log(val1);
 val1 = "var 변수 덮어쓰기";
 console.log(val1);
 
-var val1= "var 변수 재선언"
+var val1 = "var 변수 재선언";
 console.log(val1);
 
-let val2 = "let 변수 선언"
+let val2 = "let 변수 선언";
 console.log(val2);
 
-val2 = "let 변수 덮어쓰기"
+val2 = "let 변수 덮어쓰기";
 console.log(val2);
 
 // let은 재선언 불가.
 
 const val3 = "const 변수";
-console.log(val3)
+console.log(val3);
 
 /* val3 = "const 변수 덮어쓰기"
 console.log(val3)
@@ -32,106 +32,105 @@ val4.name = "igo2"
 console.log(val4) */
 
 //배열
-const animal = ["dog", "cat", "bird"]
-console.log(animal)
-animal[0] = "lion"
-console.log(animal)
+const animal = ["dog", "cat", "bird"];
+console.log(animal);
+animal[0] = "lion";
+console.log(animal);
 
 /* const val3 = "const 변수 재선언"
    console.log(val3); 
-const는 변수 재선언도 불가 */ 
+const는 변수 재선언도 불가 */
 
-var 사람수 = 1+3;
+var 사람수 = 1 + 3;
 var 사탕개수 = 8;
 console.log(사탕개수 / 사람수);
 
 //초로 계산
 var min = 60;
-var hour = 3600
+var hour = 3600;
 var day = 86400;
 var year = 31536000;
-console.log(day*365)
+console.log(day * 365);
 
 var 나이 = 28;
-console.log(나이 * year )
+console.log(나이 * year);
 
-//조건 연산 
+//조건 연산
 //삼항 연산자
 var x = 5;
 var y = 3;
-var big = x>y? x:y; // x 
-console.log(big)
-var small = x>y? '안녕':'잘가';
-console.log(small)
+var big = x > y ? x : y; // x
+console.log(big);
+var small = x > y ? "안녕" : "잘가";
+console.log(small);
 
 //문자열 비교
-var name = "Yeonwoo"
-var res1 = (name == "Yeonwoo")
-var res2 = (name > "Hello" )
-console.log(res1)
-console.log(res2)
+var name = "Yeonwoo";
+var res1 = name == "Yeonwoo";
+var res2 = name > "Hello";
+console.log(res1);
+console.log(res2);
 
 //문자열 연결
-var 인사 = "안녕하세요."
-var 이름 = "정연우"
-console.log(인사+ " " + 이름)
-console.log(인사.concat(" 정연우입니다."))
+var 인사 = "안녕하세요.";
+var 이름 = "정연우";
+console.log(인사 + " " + 이름);
+console.log(인사.concat(" 정연우입니다."));
 //따옴표 안 공백도 문자로 취급
 
 //문자열 앞 뒤 공백  -> trim() 사용 ->실제로 회원가입 페이지에서 스페이스바를 실수로 넣었을 때 사용하면 좋음.
-var user = " Yeonwoo "
+var user = " Yeonwoo ";
 user = user.trim();
-console.log(user) //"Yeonwoo"
+console.log(user); //"Yeonwoo"
 
 //문자열 길이 -> length속성 이용하기
-var 이름 = "정연우"
-console.log(이름.length) //변수 뒤에
-console.log("가나다라마바사아자차카타파하".length) //문자열 뒤에 
+var 이름 = "정연우";
+console.log(이름.length); //변수 뒤에
+console.log("가나다라마바사아자차카타파하".length); //문자열 뒤에
 
 //문자열에서 한 글자만 가져오기 -> 대괄호 사용(인덱스 값), 인덱스 값은 0부터 시작
-var 인사 = "안녕하세요"
-console.log(인사[0]) //안
-console.log(인사[1]) //녕
+var 인사 = "안녕하세요";
+console.log(인사[0]); //안
+console.log(인사[1]); //녕
 
 var 암호1 = "지도 속";
 var 암호2 = "희망을";
 var 암호3 = "훔쳐본다";
 var 암호4 = "?!";
 
-console.log(암호1[1] + 암호2[1] + 암호3[1] + 암호4[1]) //도망쳐!
+console.log(암호1[1] + 암호2[1] + 암호3[1] + 암호4[1]); //도망쳐!
 
 //문자열의 특정 위치에 있는 글자 가져오기 -> charAt(인덱스 값)함수
-var 인사 = "안녕하세요"
+var 인사 = "안녕하세요";
 console.log(인사.charAt(0));
 console.log(인사.charAt(3));
 
 //문자열 잘라내기 -> slice(a, b) a부터 b-1까지 잘라냄
 // slice(a) -> a를 시작지점으로 끝까지 잘라냄
- var 인사 = "안녕하세요"
- console.log(인사.slice(0, 2))
+var 인사 = "안녕하세요";
+console.log(인사.slice(0, 2));
 
- //일부 문자열을 다른 문자열로 변경 -> replace()함수
- var 인사 ="안녕하세요"
- var new인사 = 인사.replace("하세요", "하시구려")
- console.log(new인사);
+//일부 문자열을 다른 문자열로 변경 -> replace()함수
+var 인사 = "안녕하세요";
+var new인사 = 인사.replace("하세요", "하시구려");
+console.log(new인사);
 
- //문자열 분할 -> split("구분자")함수 : 결과를 배열로 리턴해준다.
- var 인사 = "안녕하세요. 반갑습니다."
- var 분할 = 인사.split(" ")
- console.log(분할[0])
- console.log(분할[1])
- console.log(분할) // ["안녕하세요.", "반갑습니다."]로 리턴
+//문자열 분할 -> split("구분자")함수 : 결과를 배열로 리턴해준다.
+var 인사 = "안녕하세요. 반갑습니다.";
+var 분할 = 인사.split(" ");
+console.log(분할[0]);
+console.log(분할[1]);
+console.log(분할); // ["안녕하세요.", "반갑습니다."]로 리턴
 
- //대소문자 바꾸기 -> 대문자(toUpperCase()함수) 소문자(toLowerCase()함수) 
- console.log("hello there, how are you doing?".toUpperCase())
- console.log("HELLO THERE, HOW ARE YOU DOING?".toLowerCase()) 
+//대소문자 바꾸기 -> 대문자(toUpperCase()함수) 소문자(toLowerCase()함수)
+console.log("hello there, how are you doing?".toUpperCase());
+console.log("HELLO THERE, HOW ARE YOU DOING?".toLowerCase());
 
- 
- /*조건문 if(조건){
+/*조건문 if(조건){
     조건 만족하면 실행할 코드
     }  */
 
- /*switch문 switch(조건){
+/*switch문 switch(조건){
     case 값: 코드1
             break; 
     }
@@ -143,14 +142,14 @@ console.log(인사.charAt(3));
 }
 초기문은 최초 한번만 실행, 순서는 초기문 -> 조건식 확인 -> 작업문 -> 반복 후 작업
  */
-for(var i = 0; i < 10; i++){
-   console.log(i);
+for (var i = 0; i < 10; i++) {
+  console.log(i);
 }
-//중첩 for문 
-for(var i = 0; i < 5; i++){
-   for(var j = 0; j<10; j++){
-      console.log(`집에갈까 ${j}번째 고민중`);
-   }
+//중첩 for문
+for (var i = 0; i < 5; i++) {
+  for (var j = 0; j < 10; j++) {
+    console.log(`집에갈까 ${j}번째 고민중`);
+  }
 }
 /*while(조건){
 조건이 true일 때 실행시킬 코드(작업문)
@@ -158,39 +157,39 @@ for(var i = 0; i < 5; i++){
 반복 횟수를 알 수 없는 경우 주로 사용!
 */
 var i = 0;
-while(i < 10){
-   console.log(i)
-   i++
+while (i < 10) {
+  console.log(i);
+  i++;
 }
 
 //배열 -> 데이터 값을 하나의 목록으로 생성, []로 묶고 ,로 구분, 안에 있는 값은 원소라고 부름
-var 과일Top3 = ["딸기", "망고스틴",["사과", "오렌지", "레몬"], "수박"]
-console.log(과일Top3)
-console.log(과일Top3[2])
-과일Top3[0] = "포도"
-console.log(과일Top3)
-과일Top3[30] = "귤"
-console.log(과일Top3)
-console.log(과일Top3[2][0])
-console.log(과일Top3.length)
-var 우유 = ["딸기", "바나나", "초코"]
-for(i = 0; i < 우유.length; i++){
-   console.log(우유[i])
+var 과일Top3 = ["딸기", "망고스틴", ["사과", "오렌지", "레몬"], "수박"];
+console.log(과일Top3);
+console.log(과일Top3[2]);
+과일Top3[0] = "포도";
+console.log(과일Top3);
+과일Top3[30] = "귤";
+console.log(과일Top3);
+console.log(과일Top3[2][0]);
+console.log(과일Top3.length);
+var 우유 = ["딸기", "바나나", "초코"];
+for (i = 0; i < 우유.length; i++) {
+  console.log(우유[i]);
 }
 // length 메소드 -> 개수 구할 수 있음
 // for문에서 응용하면 조건에 배열.length해서 범위 조절할 수 있음
 // push 메소드 -> 배열에 원소 추가할 때 .push(추가할 데이터)  --> 인덱스 맨 뒤로 들어간다.
 // unshift 메소드 -> 배열에 원소 추가할 때 .unshift(추가할 데이터 ---> 인덱스 맨 앞에 들어간다.)
 
-우유.push("커피")
-console.log(우유)
-우유.unshift("메론")
-console.log(우유)
+우유.push("커피");
+console.log(우유);
+우유.unshift("메론");
+console.log(우유);
 
-//pop 메소드 -> 마지막 원소를 제거 
+//pop 메소드 -> 마지막 원소를 제거
 //shift 메소드 -> 첫번째 원소를 제거
 
-우유.pop()
+우유.pop();
 console.log(우유);
 우유.shift();
 console.log(우유);
@@ -198,35 +197,35 @@ console.log(우유);
 //배열 결합하기 -> 첫 번째 배열.concat(두 번째 배열)
 //여러 배열 결합 -> 결합하려는 배열을 차례로 괄호 안에 넣고 쉼표로 구분
 
-var 포유류 = ["강아지", "고양이", "소"]
-var 파충류 = ["비어디드래곤", "나일모니터", "카멜레온"]
-var 조류 = ["앵무새", "독수리", "매"]
-var 포유류파충류 = 포유류.concat(파충류)
-console.log(포유류파충류)
-console.log(포유류)
-console.log(파충류)
-var 모든동물 = 포유류.concat(파충류, 조류)
-console.log(모든동물)
+var 포유류 = ["강아지", "고양이", "소"];
+var 파충류 = ["비어디드래곤", "나일모니터", "카멜레온"];
+var 조류 = ["앵무새", "독수리", "매"];
+var 포유류파충류 = 포유류.concat(파충류);
+console.log(포유류파충류);
+console.log(포유류);
+console.log(파충류);
+var 모든동물 = 포유류.concat(파충류, 조류);
+console.log(모든동물);
 
-//배열 다루기 
+//배열 다루기
 //배열 원소 인덱스 찾기 -> 배열이름.indexOf(원소) 배열에 없는 원소 값을 물어보면 -1 반환.
-// includes(검사할 값) 함수로도 인덱스가 있는지 없는지 확인할 수 있음. 다만 반환값이 
+// includes(검사할 값) 함수로도 인덱스가 있는지 없는지 확인할 수 있음. 다만 반환값이
 // True 와 false로 나온다는 차이점이 있다.
-var 색상 = ["빨강", "초록", "파랑"]
-console.log(색상.indexOf("파랑"))
-console.log(색상.indexOf("빨강"))
+var 색상 = ["빨강", "초록", "파랑"];
+console.log(색상.indexOf("파랑"));
+console.log(색상.indexOf("빨강"));
 //배열에 포함된 모든 원소를 하나의 문자열로 생성 -> 배열이름.join() -> 각 원소를 콤마로 구분
-var 영화이름 = ["해리포터", "아바타", "아이언맨"]
-console.log(영화이름.join())
+var 영화이름 = ["해리포터", "아바타", "아이언맨"];
+console.log(영화이름.join());
 //콤마를 구분자로 사용하고 싶지 않다면? -> .join(내가 원하는 구분자)
-console.log(영화이름.join("*"))
-console.log(영화이름.join(" "))
-var 주소 = ["서울시","송파구","문정2동"]
-console.log(주소)
-console.log(주소.join())
-console.log(주소.join(" "))
+console.log(영화이름.join("*"));
+console.log(영화이름.join(" "));
+var 주소 = ["서울시", "송파구", "문정2동"];
+console.log(주소);
+console.log(주소.join());
+console.log(주소.join(" "));
 //스택 -> 맨 처음에 추가한 원소가 맨 마지막에 제거 (LIFO 라스트 인 퍼스트 아웃)
-//스택구현 -> push 와 pop으로 
+//스택구현 -> push 와 pop으로
 //큐 -> 데이터를 차례대로 입력하고, 입력된 순서대로 꺼냄 (FIFO 퍼스트인 퍼스트 아웃)
 //큐는 -> push 와 shift로
 //스택은 회전초밥 접시 치울 때 생각해보기, 큐는 프린트기 원리 생각해보기
@@ -237,14 +236,14 @@ console.log(주소.join(" "))
 // 더 큰 숫자를 원하면 반환한 값에 곱셈을 추가하기
 // 주의할 점은 애초에 1미만을 반환하기 때문에 만약 0, 1, 2, 3을 출력하고 싶으면 4를 곱해야 한다.
 // 그래야 4미만인 소숫점이 반환될 것이고 그 수를 floor를 사용해서 정수로 바꿔주면 되기 때문이다.
-var 랜덤 = Math.random()
-console.log(랜덤)
-console.log(랜덤 * 10)
-console.log(Math.random() * 10)
-var 정수인랜덤 = Math.floor(랜덤 * 10)
-console.log(정수인랜덤)
+var 랜덤 = Math.random();
+console.log(랜덤);
+console.log(랜덤 * 10);
+console.log(Math.random() * 10);
+var 정수인랜덤 = Math.floor(랜덤 * 10);
+console.log(정수인랜덤);
 
-//splice() 함수 -> 배열의 특정 인덱스의 원소를 제거하는 함수 
+//splice() 함수 -> 배열의 특정 인덱스의 원소를 제거하는 함수
 // 배열이름.splice(제거를 시작할 인덱스, 제거할 갯수)
 
 //객체는 프로퍼티와 메소드로 구성, 프로퍼티는 객체의 고유한 속성들, 메소드는 함수(기능)
@@ -252,22 +251,19 @@ console.log(정수인랜덤)
 //객체내의 모든 키 목록을 불러오는 메소드 -> Object.keys()
 // 키에는 문자열만! but 따옴표 생략가능, 다만 키에 공백을 넣고 싶으면 따옴표를 써야함.
 // 값에는 모든 타입의 자료형 사용 가능, 배열 함수도 들어갈 수 있음.
- //배열과 객체는 언제 사용하는게 좋은지? 
+//배열과 객체는 언제 사용하는게 좋은지?
 // 배열은 여러 개체를 나열할 때, 객체는 다양한 속성이 있는 하나의 개체를 표현할 때
 // 객체는 배열과 달리 순서가 없다. 따라서 키의 순서가 중요할 때는 객체 사용X
 var 동물 = ["강아지", "고양이", "코뿔소"];
-var 강아지 = {이름 : "~~~",
-나이 : 13,
-주소 : "~~~",
-};
-console.log(강아지["이름"])
-console.log(강아지.이름)
-console.log(Object.keys(강아지))
+var 강아지 = { 이름: "~~~", 나이: 13, 주소: "~~~" };
+console.log(강아지["이름"]);
+console.log(강아지.이름);
+console.log(Object.keys(강아지));
 // 객체에 값 추가 -> 객체["키"] = 추가할 값 또는 객체.키 = 추가할 값
-강아지["견종"] = "허스키"
-console.log(강아지)
-강아지.색깔 = "검정색"
-console.log(강아지)
+강아지["견종"] = "허스키";
+console.log(강아지);
+강아지.색깔 = "검정색";
+console.log(강아지);
 //객체를 브라우저 화면에 표시하려면 JSON.stringify 사용해야함
 /* 
    var 고양이 = {
@@ -276,3 +272,159 @@ console.log(강아지)
 }
 document.write(JSON.stringify(고양이))
 */
+
+//객체와 배열의 결합
+//객차/배열의 값으로 객체/배열을 사용
+var 공룡 = [
+  { 이름: "티라노", 연대: "백악기 후기" },
+  { 이름: "스테고", 연대: "쥐라기 후기" },
+  { 이름: "플라테오", 연대: "트라이아스기 " },
+];
+console.log(공룡[0].이름 + "<br>");
+console.log(공룡[2].연대);
+
+var 민지 = { 이름: "민지", 나이: 11, 행운의숫자: [2, 4, 6, 8] };
+var 지훈 = { 이름: "지훈", 나이: 15, 행운의숫자: [3, 9, 40] };
+var 서연 = { 이름: "서연", 나이: 19, 행운의숫자: [1, 2, 30] };
+var 친구 = [민지, 지훈, 서연];
+
+console.log(친구[1]);
+console.log(친구[2].이름);
+console.log(친구[0].행운의숫자[1]);
+
+var 빌려준돈 = {};
+빌려준돈["지훈"] = 5000;
+빌려준돈["민지"] = 7000;
+
+console.log(빌려준돈["지훈"]);
+console.log(빌려준돈["진영"]); //undefined 나옴
+//지훈이가 2000원을 더 빌렸다면?
+// 빌려준돈["지훈"] = 7000;
+// console.log(빌려준돈["지훈"])
+// //연산을 이용한다면?
+빌려준돈["지훈"] = 빌려준돈["지훈"] + 2000;
+console.log(빌려준돈["지훈"]);
+
+var 영화 = {
+  "니모를 찾아서": {
+    개봉연도: 2003,
+    상영시간: 100,
+    출연진: ["엘버트 브룩스", "엘런 드제너러스", "알렉산더 굴드"],
+    형식: "DVD",
+  },
+  "스타워즈에피소드6 제다이의 귀환": {
+    개봉연도: 1983,
+    상영시간: 134,
+    출연진: ["마크 해밀", "해리슨 포드", "캐리 피셔"],
+    형식: "DVD",
+  },
+};
+console.log(영화["니모를 찾아서"].출연진);
+console.log(영화["스타워즈에피소드6 제다이의 귀환"].상영시간);
+
+//우리 회사에서 서비스하는 영화의 이름만 뽑고 싶으면?
+// 영화 객체에서 영화이름은 키로 저장되어 있기 때문에 키값을 뽑아야 함.
+// 따라서 Object.keys()함수 사용해서 키값만 뽑기
+console.log(Object.keys(영화));
+
+//객체의 값에 변수를 넣어도 됨. 이럴 때 키와 변수의 이름이 같은 경우 축약 가능
+/*예를 들어 키 값으로 넓이와 높이를 정해놓고 변수로 넓이와 높이를 설정해서 프롬프트로
+    사용자의 입력값을 받으려고 한다면? 이럴 때 키와 변수의 이름은 같기 때문에 축약형 사용가능
+    */
+
+let width = 100;
+let height = 100;
+
+/* let area = {
+       width : "width",
+       height : "height"
+      }  
+   */
+let area = {
+  width,
+  height,
+};
+console.log(area);
+
+//객체 안에는 함수를 넣을 수도 있음. 객체 안의 함수를 호출할 때는 ()를 넣어줘야 함.
+//속해있는 객체 안의 키에 접근하는 방법 -> this를 사용하면 간단하게 접근 가능
+var dog = {
+  name: "바둑이",
+  age: 15,
+  speak: function () {
+    console.log("멍멍");
+    console.log(this.name);
+  },
+};
+dog.speak();
+
+//생성자 함수(틀, 껍데기 만드는) : 코드 한 줄로 유사한 객체(구조 똑같은) 여러개 만듬 
+//특징 : 함수 이름의 첫 글자는 대문자로 시작하는게 관례, new 연산자를 붙여서 실행
+
+//생성자 함수 -> function 함수이름에 대문자로 시작, 매개변수에 변수설정
+// 키값에는 this 붙여서, ":"" 대신 "=" 사용, 값에는 매개변수로 지정한 변수 지정
+function Animals(name, age){
+   this.name = name
+   this.age = age
+}
+
+//코드 한 줄로 객체를 생성 -> new 연산자를 사용
+var dog = new Animals("하늘이", 18); //dog 객체를 생성
+var cat = new Animals("야옹이", 10); //cat 객체를 생성 
+var tiger = new Animals("어흥이", 20);
+var lion = new Animals("캬앙이", 25);
+console.log(lion)
+var panda = new Animals("푸바오", 5); 
+console.log(panda)
+/*
+var dog = {
+   name : "하늘이",
+   age : 18
+}
+var cat = {
+   name : "야옹이",
+   age : 10
+}
+var tiger = {
+   name : "어흥이",
+   age : 20
+}
+var lion = {
+   name : "캬앙이",
+   age : 25
+}
+*/
+//함수는 매개변수 개수에 따라서 같은 이름의 함수를 여러가지 만들 수 있음
+//내장 객체 -> 자바스크립트에 내장되어 있는 객체 
+//Date 객체 : 시간 정보를 담는 객체, 월(month)값은 0부터 시작
+var now = new Date();
+console.log(now)
+
+//Date 객체의 메소드는 여러 가지가 있다. (getDate(), getHours()......)
+var date = now.getDate();
+console.log(date)
+var hour = now.getHours();
+console.log(hour)
+//현재 우리나라 시간 값을 가진 객체를 생성하고 싶으면 toLocaleString() 사용
+console.log(now.toLocaleDateString()) // 날짜만
+console.log(now.toLocaleTimeString()) // 시간만
+console.log(now.toLocaleString()) //날짜, 시간 전부
+
+//Math 객체 -> 수학 계산을 위한 객체, new Math()로 객체를 생성하지 않음
+//Math.프로퍼티 또는 Math.메소드()
+var sq = Math.sqrt(4); // 2
+var area1 = Math.PI*2*2; // 2 * 2 * 3.141592....
+
+//난수 발생 -> Math.random() 1보다 작은 0~1 사이의 실수를 리턴
+// Math.floor(m) -> m의 소수점 이하를 제거한 정수 리턴
+// 0~ 100 사이의 정수 10개를 랜덤하게 생성하려면?
+for(i = 0; i < 10; i++){
+   var m = Math.random()*100;
+   var n = Math.floor(m);
+   console.log(n)
+}
+
+//함수의 구성 -> function 함수이름(arg1, arg2, ...argn){
+//              ..........프로그램 코드..........
+//              결과를 리턴하는 return문
+//               }
