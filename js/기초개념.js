@@ -449,3 +449,26 @@ console.log(addN)
 // 확인 버튼 누르면 true 리턴, 취소 버튼을 누르거나 강제로 닫으면 false 리턴
 
 // alert("메시지") -> 메시지와 확인버튼을 가진 다이얼로그 출력, 메시지 전달하고 끝
+
+// 화살표 함수 -> 함수 표현식보다 단순하고 간결한 문법으로 함수를 만들 수 있는 방법
+// let 함수이름 = (arg1, arg2....) => {
+//  프로그램 코드
+//  return 문   
+// }
+let adder2 = (a, b) => {
+  let sum = a + b;
+  return sum;
+}
+console.log(adder2(1, 3));
+// 이 화살표 함수를 원래 함수 표현식으로 나타내면?
+function adder3(a, b){
+  var sum = a + b;
+  return sum;
+}
+console.log(adder3(1, 3))
+// 매개변수가 없는 경우 소괄호 생략 불가
+// 매개변수가 한 개인 경우 소괄호도 생략 가능, 코드가 한 줄인 경우 중괄호 생략 가능
+// let hi = () => {
+//   console.log("안녕하세요")
+// }
+let hi = () => console.log("안녕하세요")
