@@ -112,7 +112,7 @@
         }
       });
       document.write("배열의 남은 요소 : " + numbers);
-      document.write("<hr>")
+      document.write("<hr>");
 
       let apple = {
         이름: "apple",
@@ -132,26 +132,33 @@
       let fruits2 = [apple, banana, orange];
 
       let answer2 = prompt("찾으시려는 과일을 입력해주세요");
-    
-      
-     fruits2 = fruits2.find((fruit) => answer2 == fruit.이름);
-      document.write("<br>")
+
+      fruits2 = fruits2.find((fruit) => answer2 == fruit.이름);
+      document.write("<br>");
       document.write("이름 : " + fruits2.이름);
-      document.write("<br>")
+      document.write("<br>");
       document.write("수량 : " + fruits2.수량);
-      document.write("<br>")
+      document.write("<br>");
       document.write("가격 : " + fruits2.가격);
-      document.write("<hr>")
+      document.write("<hr>");
 
+      const array5 = ["javascript", "css", "react", "html"];
+      array5.find((lang) => {
+        if (lang.length >= 5) {
+          document.write(lang + " : " + lang.length + " ");
+        }
+      });
 
-
-      const array5 = ["javascript", "css", "react", "html"]
-      let item5 = array5.find(lang =>{
-        if(lang.length >= 5){
-        document.write(item5 + " : " + item5.length)
-        }}
-        )
-        document.write(item5)
+      const numbers2 = [5, 19, 42, 36, 70];
+      let numbers2_double = numbers2.map(function (num) {
+        if (num % 3 !== 0) {
+          return num;
+        } else {
+          return num * 2;
+        }
+      });
+      document.write("<hr>" + "결과 : ")
+      document.write(numbers2_double);
     </script>
   </body>
 </html>
