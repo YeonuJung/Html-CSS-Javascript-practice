@@ -472,3 +472,77 @@ console.log(adder3(1, 3))
 //   console.log("안녕하세요")
 // }
 let hi = () => console.log("안녕하세요")
+
+// 고차함수 -> 인자로 함수를 받거나 함수를 반환하는 함수
+// 함수 안에서 다른 함수를 호출할 수 있는 함수
+// 매개변수에 입력값으로 들어가는 함수를 "콜백함수"라고 한다.
+// 콜백함수는 인자로 전달되는 시점에 바로 함수를 호출하는 것이 아니라
+// 고차함수 내부에서 필요할 때 호출되는 함수
+const add = (a, b) => a + b;
+const sub = (a, b) => a - b;
+
+function calculator(a, b, calc){
+  let result = calc(a, b);
+  console.log(result);
+  return result;
+}
+
+calculator(1, 1, add);
+calculator(1, 2, sub);
+
+setTimeout(() => {
+  console.log("5초 후에 실행됩니다.")
+}, 5000);
+
+// forEach() -> 콜백 함수를 배열의 각 요소에 대해 한 번씩 실행
+// forEach()의 콜백함수는 매개변수를 3개를 가질 수 있음
+// arr.forEach(function(currentValue, index, array){실행하려는 코드})
+// currentValue는 현재 처리되고 있는 요소(필수), index는 현재 처리되고 있는 요소의 인덱스(옵션)
+// array는 forEach()함수를 호출한 배열(옵션)
+
+// forEach()를 이용한 배열 순회
+const numbers = [10, 20, 30, 40, 50];
+numbers.forEach(function(number){
+  console.log(number)
+})
+
+numbers.forEach(number => console.log(number));
+
+numbers.forEach((number, index) => console.log(
+  "Index : " + index + " Value " + number)
+)
+
+numbers.forEach((number, index, array) => console.log(array))
+
+// find()함수 -> 조건을 만족하는 배열의 요소를 찾아서 반환해줌, 만족하는 거 찾는 순간 종료
+const fruits = ["apple", "banana", "melon", "orange", "melon"];
+const favorite2 = fruits.find(name => name === "melon");
+console.log(favorite2)
+
+// findIndex() -> 조건을 만족하는 인덱스를 반환, 만족하는 거 찾는 순간 종료
+index2 = fruits.findIndex(name => name === "melon");
+console.log(index2);
+
+// some() -> 배열의 아이템들이 조건을 부분적으로 만족하는지 확인, true값 반환
+const some1 = fruits.some(function(name){
+  return name === "melon"
+})
+console.log(some1)
+
+//every() 배열의 아이템들이 조건을 전부 만족하는지 확인
+
+//filter() -> 조건에 맞는 모든 아이템들을 새로운 배열로 생성 -> 조건을 끝까지 다 봄
+// find랑 다르게 조건을 앞에서 만족한다고 해도 종료하지 않고 뒤에까지 다 살펴봄
+const filter1 = fruits.filter(function(name){
+  return name === "melon";
+})
+console.log(filter1)
+
+//map() -> 배열 내 모든 아이템에 콜백함수를 적용한 결과를 모아 새로운 배열을 반환
+// 현재 처리되고 있는 요소 뿐만 아니라 인덱스도 출력가능 
+// forEach()에서 array만 제외하고 생각하면 됨.
+const array6 = [10, 20, 30, 40, 50]
+const map1 = array6.map(function(number){
+  return number * 3
+})
+console.log(map1)
