@@ -1,131 +1,136 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>객체실습</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        var car = {};
-        car[0] = "red"
-        car[1] = 10000
-        car[2] = 12345
-        document.write("자동차 객체 표현" + "<hr>")
-        document.write(("자동차 색상 : " + car[0]))
-        document.write("<br>")
-        document.write(("자동차 가격 : " + car[1]))
-        document.write("<br>")
-        document.write(("자동차 번호 : " + car[2]))
-        document.write("<br>")
-        document.write("<br>")
+          /*
+          var car = {};
+          car[0] = "red"
+          car[1] = 10000
+          car[2] = 12345
+          document.write("자동차 객체 표현" + "<hr>")
+          document.write(("자동차 색상 : " + car[0]))
+          document.write("<br>")
+          document.write(("자동차 가격 : " + car[1]))
+          document.write("<br>")
+          document.write(("자동차 번호 : " + car[2]))
+          document.write("<br>")
+          document.write("<br>")
 
-        var account = {};
-        document.write("계좌 객체 표현" + "<hr>")
-        account.계좌주인 = "정연우";
-        account.계좌번호 = 12345;
-        account.계좌잔액 = 15000;
-        document.write("계좌주인 : " + account.계좌주인)
-        document.write("<br>")
-        document.write("계좌번호 : " + account.계좌번호)
-        document.write("<br>")
-        document.write("계좌잔액 : " + account.계좌잔액)
-        document.write("<br>")
-        document.write("<br>")
+          var account = {};
+          document.write("계좌 객체 표현" + "<hr>")
+          account.계좌주인 = "정연우";
+          account.계좌번호 = 12345;
+          account.계좌잔액 = 15000;
+          document.write("계좌주인 : " + account.계좌주인)
+          document.write("<br>")
+          document.write("계좌번호 : " + account.계좌번호)
+          document.write("<br>")
+          document.write("계좌잔액 : " + account.계좌잔액)
+          document.write("<br>")
+          document.write("<br>")
 
 
-        var num = 3.6432;
-        document.write("Math 객체 표현" + "<hr>")
-        document.write("최대값 : " + Math.max(10, 5, 8, 30))
-        document.write("<br>")
-        document.write("최소값 : " + Math.min(10, 5, 8, 30))
-        document.write("<br>")
-        document.write("소수 첫째자리 반올림 : " + Math.round(num))
-        document.write("<br>")
-        document.write("소수 첫째자리 내림 : " + Math.floor(num))
-        document.write("<br>")
-        document.write("소수 첫째자리 올림 : " + Math.ceil(num))
-        document.write("<br>")
-        document.write("원주율 : "+ Math.PI)
-        document.write("<br>")
-        document.write("<br>")
+          var num = 3.6432;
+          document.write("Math 객체 표현" + "<hr>")
+          document.write("최대값 : " + Math.max(10, 5, 8, 30))
+          document.write("<br>")
+          document.write("최소값 : " + Math.min(10, 5, 8, 30))
+          document.write("<br>")
+          document.write("소수 첫째자리 반올림 : " + Math.round(num))
+          document.write("<br>")
+          document.write("소수 첫째자리 내림 : " + Math.floor(num))
+          document.write("<br>")
+          document.write("소수 첫째자리 올림 : " + Math.ceil(num))
+          document.write("<br>")
+          document.write("원주율 : "+ Math.PI)
+          document.write("<br>")
+          document.write("<br>")
 
-        var person = {
-            firstname : "Sooa",
-            lastname : "Jung",
-            sayHello : function(){
-                return document.write("Hello!" + "<br>" + "My name is " + this.firstname + "&nbsp" + this.lastname)
-            }
-    }
-        person.sayHello()
-        document.write("<br>")
-        document.write("<br>")
+          var person = {
+              firstname : "Sooa",
+              lastname : "Jung",
+              sayHello : function(){
+                  return document.write("Hello!" + "<br>" + "My name is " + this.firstname + "&nbsp" + this.lastname)
+              }
+      }
+          person.sayHello()
+          document.write("<br>")
+          document.write("<br>")
 
-        function Fruit(name, color, price){
-            this.이름 = name,
-            this.색깔 = color,
-            this.가격 = price;
-            this.display = function () {
-                return `이름 : ${this.이름}<br>색깔 : ${this.색깔}<br>가격 : ${this.가격}<hr>`
-            }
-        }
+          function Fruit(name, color, price){
+              this.이름 = name,
+              this.색깔 = color,
+              this.가격 = price;
+              this.display = function () {
+                  return `이름 : ${this.이름}<br>색깔 : ${this.색깔}<br>가격 : ${this.가격}<hr>`
+              }
+          }
 
-        var apple = new Fruit("사과", "red", 1000);
-        var orange = new Fruit("오렌지", "orange", 3000);
-        // document.write("이름 : " + apple.이름)
-        // document.write("<br>")
-        // document.write("색깔 : " + apple.색깔)
-        // document.write("<br>")
-        // document.write("가격 : " + apple.가격)
-        // document.write("<hr>")
-        // document.write("이름 : " + orange.이름)
-        // document.write("<br>")
-        // document.write("색깔 : " + orange.색깔)
-        // document.write("<br>")
-        // document.write("가격 : " + orange.가격)
-        // document.write("<hr>")
-        // document.write("<br>")
-        // document.write("<br>")
-        document.write(apple.display())
-        document.write(orange.display())
+          var apple = new Fruit("사과", "red", 1000);
+          var orange = new Fruit("오렌지", "orange", 3000);
+          // document.write("이름 : " + apple.이름)
+          // document.write("<br>")
+          // document.write("색깔 : " + apple.색깔)
+          // document.write("<br>")
+          // document.write("가격 : " + apple.가격)
+          // document.write("<hr>")
+          // document.write("이름 : " + orange.이름)
+          // document.write("<br>")
+          // document.write("색깔 : " + orange.색깔)
+          // document.write("<br>")
+          // document.write("가격 : " + orange.가격)
+          // document.write("<hr>")
+          // document.write("<br>")
+          // document.write("<br>")
+          document.write(apple.display())
+          document.write(orange.display())
 
-        var answer = parseInt(prompt("하나를 선택하세요 : 가위(0), 바위(1), 보(2)"))
-        var random = Math.floor(Math.random()*3)
-        var game = [0, 1, 2]
-        if(answer === 0){
-            if(game[random] === 0){
-                document.write("컴퓨터는 가위를 냈습니다." + "<br>" + "비겼습니다.")
-            }
-            else if(game[random] === 1){
-                document.write("컴퓨터는 바위를 냈습니다." + "<br>" + "컴퓨터가 이겼습니다.")
-            }
-            else{
-                document.write("컴퓨터는 보를 냈습니다." + "<br>" + "컴퓨터가 졌습니다.")
-            }
-            }
-        else if(answer === 1){
-            if(game[random] === 0){
-                document.write("컴퓨터는 가위를 냈습니다." + "<br>" + "컴퓨터가 졌습니다.")
-            }
-            else if(game[random] === 1){
-                document.write("컴퓨터는 바위를 냈습니다." + "<br>" + "비겼습니다.")
-            }
-            else{
-                document.write("컴퓨터는 보를 냈습니다." + "<br>" + "컴퓨터가 이겼습니다.")
-            }
-            }
-        else{
-            if(game[random] === 0){
-                document.write("컴퓨터는 가위를 냈습니다." + "<br>" + "컴퓨터가 이겼습니다.")
-            }
-            else if(game[random] === 1){
-                document.write("컴퓨터는 바위를 냈습니다." + "<br>" + "컴퓨터가 졌습니다.")
-            }
-            else{
-                document.write("컴퓨터는 보를 냈습니다." + "<br>" + "비겼습니다.")
-            }
-            }
+          var answer = parseInt(prompt("하나를 선택하세요 : 가위(0), 바위(1), 보(2)"))
+          var random = Math.floor(Math.random()*3)
+          var game = [0, 1, 2]
+          if(answer === 0){
+              if(game[random] === 0){
+                  document.write("컴퓨터는 가위를 냈습니다." + "<br>" + "비겼습니다.")
+              }
+              else if(game[random] === 1){
+                  document.write("컴퓨터는 바위를 냈습니다." + "<br>" + "컴퓨터가 이겼습니다.")
+              }
+              else{
+                  document.write("컴퓨터는 보를 냈습니다." + "<br>" + "컴퓨터가 졌습니다.")
+              }
+              }
+          else if(answer === 1){
+              if(game[random] === 0){
+                  document.write("컴퓨터는 가위를 냈습니다." + "<br>" + "컴퓨터가 졌습니다.")
+              }
+              else if(game[random] === 1){
+                  document.write("컴퓨터는 바위를 냈습니다." + "<br>" + "비겼습니다.")
+              }
+              else{
+                  document.write("컴퓨터는 보를 냈습니다." + "<br>" + "컴퓨터가 이겼습니다.")
+              }
+              }
+          else{
+              if(game[random] === 0){
+                  document.write("컴퓨터는 가위를 냈습니다." + "<br>" + "컴퓨터가 이겼습니다.")
+              }
+              else if(game[random] === 1){
+                  document.write("컴퓨터는 바위를 냈습니다." + "<br>" + "컴퓨터가 졌습니다.")
+              }
+              else{
+                  document.write("컴퓨터는 보를 냈습니다." + "<br>" + "비겼습니다.")
+              }
+              }
+              */
+
+        
+
     
     </script>
-</body>
+  </body>
 </html>
