@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 실습3</title>
+</head>
+<body>
+    <h3>innerHTML</h3>
+    <hr>
+    <p id = "pText" onclick="changeText()">이번 여름에는 어디로 여행을 갈까요?</p>
+    
+    <script>
+        function changeText(){
+        let answer = prompt("바꾸고 싶은 텍스트로 입력하세요")
+        let p = document.getElementById("pText") 
+        p.innerHTML = answer
+        }
+    </script>
+</body>
+</html>
