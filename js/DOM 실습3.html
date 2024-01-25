@@ -8,13 +8,12 @@
 <body>
     <h3>innerHTML</h3>
     <hr>
-    <p id = "pText" onclick="changeText()">이번 여름에는 어디로 여행을 갈까요?</p>
+    <p onclick="changeText(this)">이번 여름에는 어디로 여행을 갈까요?</p>
     
     <script>
-        function changeText(){
-        let answer = prompt("바꾸고 싶은 텍스트로 입력하세요")
-        let p = document.getElementById("pText") 
-        p.innerHTML = answer
+        function changeText(obj){
+        let answer = prompt("바꾸고 싶은 텍스트로 입력하세요") 
+        obj.innerHTML = answer
         }
     </script>
 </body>

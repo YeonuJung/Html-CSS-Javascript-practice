@@ -163,6 +163,7 @@ while (i < 10) {
 }
 
 // 배열 -> 데이터 값을 하나의 목록으로 생성, []로 묶고 ,로 구분, 안에 있는 값은 원소라고 부름
+// 컬렉션을 배열로 바꾸고 싶으면 Array.from(컬렉션)
 var 과일Top3 = ["딸기", "망고스틴", ["사과", "오렌지", "레몬"], "수박"];
 console.log(과일Top3);
 console.log(과일Top3[2]);
@@ -616,6 +617,7 @@ console.log(set);
 
 // Map 객체 -> 키와 값의 쌍으로 이루어진 객체, Map 객체는 key에 모든 자료형 가능
 const map = new Map(); // Map객체 생성
+console.log(map) // Map(0) {}  Set객체와 마찬가지로 갯수와 값을 보여줌
 map.set("name", "soo"); 
 map.set(1, "number"); 
 map.set(true, "trueValue");
