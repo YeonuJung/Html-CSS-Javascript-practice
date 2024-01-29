@@ -400,6 +400,8 @@ var lion = {
 // Date 객체 : 시간 정보를 담는 객체, 월(month)값은 0부터 시작
 var now = new Date();
 console.log(now);
+var now2 = Date()
+console.log(now2)
 
 // Date 객체의 메소드는 여러 가지가 있다. (getDate(), getHours()......)
 var date = now.getDate();
@@ -573,7 +575,7 @@ console.log(newArr2);
 // 구조 분해 할당 -> 배열이나 객체의 속성을 해체해서 그 값을 개별 변수에 담는 것
 // [변수이름] = [저장하고 싶은 값]
 let a, b, rest2;
-[a, b] = [10, 20];
+[a, b] = [10, 20, 30];
 console.log(a); //10
 console.log(b); //20
 [a, b, ...rest2] = [10, 20, 30, 40, 50];
@@ -618,7 +620,7 @@ console.log(set);
 // Map 객체 -> 키와 값의 쌍으로 이루어진 객체, Map 객체는 key에 모든 자료형 가능
 const map = new Map(); // Map객체 생성
 console.log(map) // Map(0) {}  Set객체와 마찬가지로 갯수와 값을 보여줌
-map.set("name", "soo"); 
+map.set("name", "soo");
 map.set(1, "number"); 
 map.set(true, "trueValue");
 console.log(map); // 즉 객체와는 달리 map 객체의 키에는 모든 자료형이 가능

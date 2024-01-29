@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 실습3</title>
+    <style>
+      span {
+        display: inline-block;
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>산수 문제를 풀어 봅시다.</h3>
+    수식을 계산하여 답을 입력하고 채점 버튼을 누르세요.
+    <hr />
+    <form>
+    <span class = "exp">5*6</span>&nbsp;<input class = "answer" type="text" value="" /><br />
+    <span class = "exp">7+5*3</span> <input class = "answer" type="text" value="" /><br />
+    <span class = "exp">23*2</span><input class = "answer" type="text" value="" /><br />
+    <span class = "exp">35-7</span><input class = "answer" type="text" value="" /><br />
+    <input type="button" value = "채점" onclick="marking()"/><span id = "markingButton">0</span>
+    </form>
+
+    <script>
+        let exp;
+        let answer;
+        let count;
+        let correct;
+        function marking(){
+            exp = document.querySelectorAll(".exp")
+            answer = document.querySelectorAll(".answer")
+            count = document.getElementById("markingButton")
+            correct = [30, 22, 46, 28]
+            let score = 0;
+            for(i = 0; i < exp.length; i++){
+                if(answer[i].value == correct[i]){
+                    if(count.innerHTML < 4){
+                    exp[i].style.textDecoration = "none"
+                    score++
+                    count.innerHTML = score
+                }
+                }
+                else if(answer[i].value == ""){
+                    if(count.innerHTML > 0){
+                    exp[i].style.textDecoration = "line-through" 
+                    score--
+                    count.innerHTML = score
+                }
+                }
+                else{
+                    if(count.innerHTML > 0){
+                    exp[i].style.textDecoration = "line-through" 
+                    score--
+                    count.innerHTML = score
+                }
+                }
+            }
+            if(score == 4){
+                setTimeout(() => {
+                    alert("축하합니다. 만점입니다!")}, 500);
+            }
+            }
+            //이 코드의 문제는 몇개를 맞추고 몇개를 틀렸을 경우에 점수가 합산이
+            //되어버린다는 점이다. 만약 3개 맞추고 1개틀리면 count가 3이어야 하는데
+            // +3 -1이 되어버려서 2가 된다. 어떻게 하면 해결할 수 있을지 고민해보자.
+        
+    </script>
+  </body>
+</html>

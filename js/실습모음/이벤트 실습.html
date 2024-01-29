@@ -24,8 +24,7 @@
       let span;
       function init() {
         span = document.getElementsByTagName("span");
-        console.log(span)
-        Array.from(span).forEach(function (spanItem) {
+        Object.values(span).forEach(function (spanItem) {
           spanItem.addEventListener("mouseover", underline);
           spanItem.addEventListener("mouseout", out);
           function underline() {
@@ -36,9 +35,7 @@
           }
         });
       }
-      //저는 처음에 span에 span태그를 달고 있는 애들의 노드객체를 뽑아서 해결하려 했는데
-      // 그렇게 하니깐 코드 구현이 되지 않더라구요 그래서 위에 처럼 바꿔서 해결했는데
-      // 사실 왜 안되는지 모르겠어요. 위에는 챗지피티한테 물어보고 저런 방식으로 바꾼건데..
+      
     </script>
   </body>
 </html>
