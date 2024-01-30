@@ -31,6 +31,8 @@ function input() {
 // 버튼 눌렀을 때 시간이 흘러가게 그리고 버튼을 누를 때마다 다시 초기세팅으로 바꿔주기
 button.addEventListener("click", run);
 function run() {
+  randomIndex = Math.floor(Math.random() * words.length);
+  wordDisplay.innerHTML = words[randomIndex];
   time = 10;
   isPlaying = true;
   timeInterval = setInterval(countDown, 1000);
@@ -40,6 +42,7 @@ function run() {
 //리셋 버튼 추가 -> 세팅 초기화 및 isPlaying을 false로 해서 값을 넣어도 점수가 올라가지 X
 //게임이 끝나고 버튼이 다시 돌아오게 만들려면 리셋 버튼이 필요
 resetButton.addEventListener("click", reset);
+
 function reset() {
   time = 10;
   timeLimit.innerHTML = 0;
@@ -49,7 +52,7 @@ function reset() {
   clearInterval(timeInterval);
   buttonChange("게임시작");
   wordInput.value = "";
-  wordDisplay.innerHTML = "hello";
+  wordDisplay.innerHTML = "랜덤단어";
 }
 
 // 시간이 1초씩 주는 함수 그리고 time변수에 담으면서 0초가 되었을 때 초기화
