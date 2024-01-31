@@ -7,19 +7,21 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    background-size: 120px;
+    background-image: none;
 }
+
 
 header{
     width: 100%;
-    background-color:brown;
+    background-color: sienna;
     text-align: center;
     color:cornsilk;
-    padding: 1rem;
+    padding: 1.2rem;
 }
 /* 굳이 높이를 주지말고 패딩을 전 영역에 줘서 정렬하는 것도 방법 */
 .wordDisplay{ 
-    background-color: blanchedalmond;
+    background-color: rgb(255, 235, 205);
     margin-top: 3rem;
     width: 450px;
     text-align: center;
@@ -39,17 +41,22 @@ header{
     text-align: center;
     border: 2px solid brown;
     border-radius: 8px;
+    outline: none;
 }
 
 .gameInfo{
     margin-top: 1.5rem;
     display: flex;
-    width: 280px;
+    width: 290px;
+    padding: 0 30px;
     justify-content: space-between;
-    font-size: 18px;
+    font-size: 20px;
+    color:sienna;
+    background-color: blanchedalmond;
+    border-radius: 8px;
 }
 .timeLimit, .score{
-    font-size: 35px;
+    font-size: 30px;
 }
 .buttonContainer{
     display: flex;
@@ -58,7 +65,7 @@ header{
     column-gap: 10px;
 }
 .button{
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     color:sienna;
     background-color:blanchedalmond;
     border: none;
@@ -68,16 +75,17 @@ header{
     cursor: pointer;
 }
 .resetButton{
-    margin-top: 2.5rem;    
+    margin-top: 2rem;    
     background-color: blanchedalmond;
     color:sienna;
     border: none;
     border-radius: 8px;
-    width: 40px;
-    height:1.5rem;
+    width: 50px;
+    height:40px;
     cursor: pointer;
 }
 .Loading{
     background-color:#ccc;
     cursor: not-allowed;
 }
+/* window.location.href = 파일명 */

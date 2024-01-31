@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:cursive
+  }
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    background-image: url(https://images.unsplash.com/photo-1635372722656-389f87a941b7?q=80&w=2531&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size:cover
+  }
+  .header {
+    width: 400px;
+    height: 120px;
+    background-image: url("https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  
+  .expDisplay {
+    background-color: yellow;
+    color: black;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 35px;
+    border-bottom: 2px solid black;
+    width: 400px;
+    height: 120px;
+  }
+  
+  .answerTypingBox {
+    background-color: yellow;
+    color: black;
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px;
+    width:400px;
+    height: 120px;
+  }
+  
+  .answerInput {
+    margin-top: 25px;
+    width: 80%;
+    text-align: center;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 30px;
+    outline: none;
+    font-size: 1.5rem;
+  }
+  
+  .gameInfo {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
+    height: 60px;
+    align-items: center;
+    background-color: black;
+    color: yellow;
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 10px;
+    width: 400px;
+    height: 120px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .button {
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: yellow;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .resetButton {
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: yellow;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  .Loading{
+    background-color:#ccc;
+    cursor: not-allowed;
+}
