@@ -19,7 +19,10 @@ let words = [
   "lemon",
   "watermelon",
 ];
-let randomIndex;
+let randomIndex = function(){
+  return Math.floor(Math.random() * words.length)
+}
+
 buttonChange("게임시작");
 //score 변수를 0으로 설정해놓음으로써 스코어 따로, 스코어 업데이트 따로 할 수 있음
 
@@ -33,15 +36,13 @@ function input() {
     score++;
     scoreUpdate.innerHTML = score;
     wordInput.value = ""; //초기화를 시키지 않으면 계속 점수가 올라가니깐
-    randomIndex = Math.floor(Math.random() * words.length);
-    wordDisplay.innerHTML = words[randomIndex];
+    wordDisplay.innerHTML = words[randomIndex()];
     backgroundChange()
   }}
 // 버튼 눌렀을 때 시간이 흘러가게 그리고 버튼을 누를 때마다 다시 초기세팅으로 바꿔주기
 button.addEventListener("click", run);
 function run() {
-  randomIndex = Math.floor(Math.random() * words.length);
-  wordDisplay.innerHTML = words[randomIndex];
+  wordDisplay.innerHTML = words[randomIndex()];
   time = 20;
   isPlaying = true;
   timeInterval = setInterval(countDown, 1000);
