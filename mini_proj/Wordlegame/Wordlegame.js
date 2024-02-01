@@ -36,6 +36,7 @@ function removeDiv(){
     for(item of div){
         item.remove()
     }
+    randomIndex = Math.floor(Math.random() * answer.length)
 }
 function reset() {
     removeDiv()
