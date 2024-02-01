@@ -21,7 +21,7 @@ const inputTemplate = `<div class = div>
 <input type="text" class="input" />
 <input type="text" class="input" />
 </div>`;
-
+const notice = alert("주어진 박스에 글자를 넣어서 맞추시면 됩니다. 각 칸에 맞는 알파벳을 넣으시면 칸이 초록색으로 변합니다. 만약 칸은 다르지만 해당 단어에 포함된 알파벳일 경우 노란색으로 변하고, 해당단어에 없는 알파벳일 경우 빨간색으로 칸이 칠해집니다. 마지막으로 알파벳을 기입할 때는 소문자로 기입해주셔야 한다는 점 참고해서 즐겨주시기 바랍니다.")
 const button = document.querySelector(".button");
 button.addEventListener("click", correctAnswer);
 const body = document.querySelector("body");
@@ -74,7 +74,7 @@ function correctAnswer() {
     reset()
   }
   //height가 450이상이면 더이상 추가되지 않게 설정해보기.
-else if(body.offsetHeight > 450){
+else if(body.offsetHeight > 500){
     alert("기회를 모두 소진하셨습니다.");
     reset()
 }

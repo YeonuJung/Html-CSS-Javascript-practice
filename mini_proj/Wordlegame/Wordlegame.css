@@ -16,7 +16,7 @@ input{
     height: 60px;
     font-size: 50px;
     text-align: center;
-    border: 2px none;
+    border: none;
     box-sizing: border-box;
     color: black;
 }
@@ -25,7 +25,7 @@ div{
 }
 button{
     position: relative;
-    left: 30px;
+    left: 20px;
     top : 30px;
     padding:5px;
     background-color:#00944c;
@@ -33,4 +33,11 @@ button{
     cursor: pointer;
     border-radius: 8px;
     border-style: hidden;
+}
+p{
+    font-size: 40px;
+    font-weight: 900;
+    position: relative;
+    left: 140px;
+    color: black;
 }
