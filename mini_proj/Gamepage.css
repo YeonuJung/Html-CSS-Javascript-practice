@@ -1,0 +1,49 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+  height:100vh;
+}
+.main{
+  width: 100vw;
+  height: 82vh;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.main > .game{
+  width: 42vw;
+  height: 35vh;
+  background-color: white;
+  border: 1px solid black;
+}
+header {
+  position: sticky;
+  top: 0;
+  background: pink;
+  z-index: 999;
+  height: 18vh;
+}
+header nav{
+    height: 18vh;
+}
+header nav ul {
+  height: 18vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 40px;
+}
+header nav ul li {
+  margin: 0 30px;
+  list-style: none;
+  font-size: 20px;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+}

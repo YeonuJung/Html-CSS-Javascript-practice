@@ -8,7 +8,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-size: 120px;
+    background-size: 250px;
     background-image: none;
 }
 
@@ -19,6 +19,7 @@ header{
     text-align: center;
     color:cornsilk;
     padding: 1.2rem;
+    font-size: 25px;
 }
 /* 굳이 높이를 주지말고 패딩을 전 영역에 줘서 정렬하는 것도 방법 */
 .wordDisplay{ 
@@ -27,7 +28,7 @@ header{
     width: 450px;
     text-align: center;
     font-weight: 900;
-    font-size: 70px;
+    font-size: 80px;
     color:sienna;
     padding: 40px;
     border-radius: 8px;
@@ -77,6 +78,10 @@ header{
     border-radius: 8px;
     cursor: pointer;
     font-size: 1.5rem;
+    transition: 0.5s;
+}
+.button:hover{
+    background-color: #ccc;
 }
 .resetButton{
     margin-top: 2.5rem;    
@@ -88,6 +93,10 @@ header{
     height:40px;
     cursor: pointer;
     font-size: 1rem;
+    transition: 0.5s;
+}
+.resetButton:hover{
+    background-color: #ccc;
 }
 .Loading{
     background-color:#ccc;
