@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+body{
+    min-height: 100vh;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: aqua;
+    padding: 40px 60px;
+}
+h2{
+    font-size: 3em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+.reset{
+    color: aqua;
+    padding: 10px;
+    border:none;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    background-color: white;
+    cursor: pointer;
+}
+.reset:hover{
+    background-color: black;
+    color: white;
+}
+.game{
+    width: 430px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+.item{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    transform: rotateY(180deg);
+    /* 얘도 같이 돌아야 도는 느낌이 살아남 */
+    background-color: white;
+    transition: 0.25s;
+}
+.item.boxOpen{
+    transform: rotateY(0deg);
+}
+.item::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    background-color:aquamarine;
+    backface-visibility: hidden;
+    /* 뒷면을 안보이게 해야 돌고나서 이 가상요소가 안보임 */
+}
+.boxOpen:after{
+    transform: rotateY(180deg);
+}
+.boxMatch:after{
+    transform: rotateY(180deg);
+}
