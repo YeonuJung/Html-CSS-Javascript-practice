@@ -66,6 +66,6 @@ for (i = 0; i < emojis.length; i++) {
           document.querySelectorAll(".boxOpen")[0].classList.remove("boxOpen");
         }
       }
-    }, 1200);
+    }, 500);
   };
 }
