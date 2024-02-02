@@ -5,8 +5,8 @@
     font-family: monospace;
 }
 body{
-    min-height: 100vh;
-    background-color: aquamarine;
+    min-height:100vh;
+    background-color: #CBFFEE;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,21 +20,23 @@ body{
     gap: 30px;
     background-color: aqua;
     padding: 40px 60px;
+    border-radius: 20px;
 }
 h2{
-    font-size: 3em;
+    font-size: 3.3em;
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.2em;
 }
 .reset{
-    color: aqua;
-    padding: 10px;
+    color: white;
+    padding: 15px;
     border:none;
+    font-weight: bold;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-size: 1.2em;
-    background-color: white;
+    font-size: 1.5em;
+    background-color: #FFCBDD;
     cursor: pointer;
 }
 .reset:hover{
@@ -59,11 +61,12 @@ h2{
     align-items: center;
     width: 100px;
     height: 100px;
-    font-size: 50px;
+    font-size: 60px;
     transform: rotateY(180deg);
     /* 얘도 같이 돌아야 도는 느낌이 살아남 */
     background-color: white;
     transition: 0.25s;
+    border-radius: 12px;
 }
 .item.boxOpen{
     transform: rotateY(0deg);
@@ -74,9 +77,10 @@ h2{
     inset: 0;
     transition: 0.25s;
     transform: rotateY(0deg);
-    background-color:aquamarine;
+    background-color:#00E598;
     backface-visibility: hidden;
     /* 뒷면을 안보이게 해야 돌고나서 이 가상요소가 안보임 */
+    border-radius: 12px;
 }
 .boxOpen:after{
     transform: rotateY(180deg);
