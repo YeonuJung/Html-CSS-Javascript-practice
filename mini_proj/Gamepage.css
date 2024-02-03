@@ -15,6 +15,8 @@ body{
   align-content: space-evenly;
   flex-wrap: wrap;
   gap: 20px;
+  background-image: url(/img/벚꽃잎.jpg);
+  background-size: contain;
 }
 .main > .game{
   width: 42vw;
@@ -51,8 +53,13 @@ header nav ul li a{
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 26px;
-    letter-spacing: 2.5px;
+    font-size: 25px;
+    letter-spacing: 2.8px;
+    cursor: pointer;
+    transition: 1.2s;
+}
+header nav ul li a:hover{
+  color:#141f33;
 }
 .MathgamePic,
 .TypinggamePic,
@@ -67,6 +74,10 @@ img{
  height: 100%;
  object-fit: fill;
  border-radius: 8px;
+ transition:1.2s;
+}
+img:hover{
+  opacity:0.4;
 }
 .Mathgamedes,
 .Typinggamedes,
@@ -75,8 +86,8 @@ img{
  width: 47%;
  height: 100%;
  text-align: left;
- color: #141f33;
- font-size: 18px;
+ color: #a79bdf;
+ font-size: 17px;
  letter-spacing: 0.5px;
  font-weight: bold;
  overflow:auto;
@@ -96,4 +107,10 @@ img{
 .Wordlegamedes::-webkit-scrollbar-thumb{
  background-color: #141f33;
  border-radius: 8px;
+}
+.Mathgamedes::-webkit-scrollbar-track,
+.Typinggamedes::-webkit-scrollbar-track,
+.Memorygamedes::-webkit-scrollbar-track,
+.Wordlegamedes::-webkit-scrollbar-track{
+  background-color: white;
 }
