@@ -9,7 +9,6 @@ body{
 .main{
   width: 100vw;
   height: 82vh;
-  background-color: white;
   display: flex;
   justify-content: space-evenly;
   align-content: space-evenly;
@@ -42,7 +41,7 @@ header nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 40px;
+  column-gap: 70px;
 }
 header nav ul li {
   margin: 0 30px;
@@ -93,6 +92,7 @@ img:hover{
  overflow:auto;
  line-height: 1.5lh;
  padding-top: 11px;
+ padding-right: 4px;
 }
 .Mathgamedes::-webkit-scrollbar,
 .Typinggamedes::-webkit-scrollbar,
