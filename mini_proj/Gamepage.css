@@ -1,6 +1,7 @@
 *{
     margin:0;
     padding:0;
+    font-family:fantasy;
 }
 body{
   height:100vh;
@@ -8,7 +9,7 @@ body{
 .main{
   width: 100vw;
   height: 82vh;
-  background-color: aquamarine;
+  background-color: white;
   display: flex;
   justify-content: space-evenly;
   align-content: space-evenly;
@@ -18,13 +19,16 @@ body{
 .main > .game{
   width: 42vw;
   height: 35vh;
-  background-color: white;
-  border: 1px solid black;
+  justify-content: space-between;
+  background-color:#f7f2e9;
+  border: 2px hidden;
+  border-radius: 8px;
+  display: flex;
 }
 header {
   position: sticky;
   top: 0;
-  background: pink;
+  background: #de8da9;
   z-index: 999;
   height: 18vh;
 }
@@ -46,4 +50,50 @@ header nav ul li {
 header nav ul li a{
     text-decoration: none;
     color: white;
+    font-weight: bold;
+    font-size: 26px;
+    letter-spacing: 2.5px;
+}
+.MathgamePic,
+.TypinggamePic,
+.MemorygamePic,
+.WordlegamePic
+{
+  width: 50%;
+  height: 100%;
+}
+img{
+ width: 100%;
+ height: 100%;
+ object-fit: fill;
+ border-radius: 8px;
+}
+.Mathgamedes,
+.Typinggamedes,
+.Memorygamedes,
+.Wordlegamedes{
+ width: 47%;
+ height: 100%;
+ text-align: left;
+ color: #141f33;
+ font-size: 18px;
+ letter-spacing: 0.5px;
+ font-weight: bold;
+ overflow:auto;
+ line-height: 1.5lh;
+ padding-top: 11px;
+}
+.Mathgamedes::-webkit-scrollbar,
+.Typinggamedes::-webkit-scrollbar,
+.Memorygamedes::-webkit-scrollbar,
+.Wordlegamedes::-webkit-scrollbar{
+  width: 15px;
+  
+}
+.Mathgamedes::-webkit-scrollbar-thumb,
+.Typinggamedes::-webkit-scrollbar-thumb,
+.Memorygamedes::-webkit-scrollbar-thumb,
+.Wordlegamedes::-webkit-scrollbar-thumb{
+ background-color: #141f33;
+ border-radius: 8px;
 }
