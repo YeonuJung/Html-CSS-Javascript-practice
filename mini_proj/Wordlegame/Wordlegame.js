@@ -74,7 +74,7 @@ function correctAnswer() {
     alert("정답입니다! 게임을 종료합니다.");
     reset()
   }
-  //height가 450이상이면 더이상 추가되지 않게 설정해보기.
+  //height가 500이상이면 더이상 추가되지 않게 설정해보기.
 else if(body.offsetHeight > 500){
     alert("기회를 모두 소진하셨습니다.");
     reset()
