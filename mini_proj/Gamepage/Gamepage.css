@@ -32,6 +32,7 @@ header {
   background: #de8da9;
   z-index: 999;
   height: 18vh;
+  width: 100vw;
 }
 header nav{
     height: 18vh;
