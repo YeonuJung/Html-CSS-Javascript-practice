@@ -78,13 +78,14 @@ function correctAnswer() {
     }
     removeClass();
   }
-  if (
-    input[0].style.backgroundColor === "green" &&
-    input[1].style.backgroundColor === "green" &&
-    input[2].style.backgroundColor === "green" &&
-    input[3].style.backgroundColor === "green" &&
-    input[4].style.backgroundColor === "green" &&
-    input[5].style.backgroundColor === "green"
+    // let inputArray= Array.from(input)
+  if (Array.from(input).every((input)=>input.style.backgroundColor === "green")
+    // input[0].style.backgroundColor === "green" &&
+    // input[1].style.backgroundColor === "green" &&
+    // input[2].style.backgroundColor === "green" &&
+    // input[3].style.backgroundColor === "green" &&
+    // input[4].style.backgroundColor === "green" &&
+    // input[5].style.backgroundColor === "green"
   ) {
     alert("정답입니다! 게임을 종료합니다.");
     reset()

@@ -4,6 +4,7 @@ const timeLimit = document.querySelector(".timeLimit");
 const scoreUpdate = document.querySelector(".score");
 const button = document.querySelector(".button");
 const resetButton = document.querySelector(".resetButton");
+
 let score = 0;
 let time = 20;
 let isPlaying;
