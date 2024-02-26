@@ -12,15 +12,17 @@ console.log('생년월일 : %d월 %d일', 10, 14)
 console.log('사는곳 : %s', '서울')
 console.log('취미 : %s, %s, %s', '노래', '자전거', '요리')
 */
+
 /*
-console.time('duration_sum')
 var num = 0;
+console.time('duration_sum')
 for(i = 1; i <= 1000; i++){
-    num = num + i 
+    num += i 
 }
-console.log('1부터 1000까지 더한 값 : %d', num)
 console.timeEnd('duration_sum')
+console.log('1부터 1000까지 더한 값 : %d', num)
 */
+
 
 
 /*
