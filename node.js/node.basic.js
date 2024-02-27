@@ -89,6 +89,7 @@ console.log("암호화 : " + cipheredOutput);
 console.log("암호화 해제 : " + decipheredOutput)
 */
 
+/*
 const myURL = new URL("https://sub.example.com:8080/p/a/t/h?query=string#hash");
    console.log(myURL);
    console.log(myURL.hostname);
@@ -97,3 +98,17 @@ const myURL = new URL("https://sub.example.com:8080/p/a/t/h?query=string#hash");
    console.log(myURL.search);
    console.log(myURL.hash);
    console.log(myURL.searchParams);
+*/
+
+/*
+const myURL = new URL("https://example.org/?bcode=B4250257160&page=300&category=javascript&category=nodejs");
+console.log(myURL.searchParams.getAll('category')); // 해당하는 키의 값 전부를 추출
+console.log(myURL.searchParams.get('category')); // 해당하는 키의 첫 번째 값만 추출
+console.log(myURL.searchParams.has('category')); // 해당 키가 존재하는지 불리안으로 반환
+console.log(myURL.searchParams.keys('category')); // 모든 키를 iterator객체로 반환
+console.log(myURL.searchParams.values('category')); // 모든 값을 iterator객체로 반환
+
+// 이를 응용하면 get으로 id 값과 password 값을 변수에 저장하고 조건문을 사용해서 아이디 비밀번호의
+// 일치여부를 판단하는 로직을 만들면? 로그인 관련 로직을 만들 수 있음. 만약 이를 프론트에서
+// id, password를 보내주는 로직과 결합하면 하나의 로그인 창을 실현할 수 있음.
+*/
