@@ -112,3 +112,52 @@ console.log(myURL.searchParams.values('category')); // 모든 값을 iterator객
 // 일치여부를 판단하는 로직을 만들면? 로그인 관련 로직을 만들 수 있음. 만약 이를 프론트에서
 // id, password를 보내주는 로직과 결합하면 하나의 로그인 창을 실현할 수 있음.
 */
+
+/*
+    기본내장모듈 실습
+const os = require('os')
+console.log('시스템의 hostname : %s', os.hostname());
+console.log('시스템의 총 메모리 : %d', os.totalmem());
+console.log('시스템의 사용 가능 메모리 : %d', os.freemem());
+console.log('시스템의 CPU 정보 : %s');
+console.log(os.cpus());
+console.log('시스템의 네트워크 인터페이스 정보');
+console.log(os.networkInterfaces());
+
+const url = new URL('https://m.search.naver.com/search.naver?query=steve+jobs&where=m&sm=mtp_hty')
+console.log(url.searchParams.get('query')); 
+console.log(url.searchParams);
+console.log(url.searchParams.get('sm'))
+
+const path = require('path');
+
+let directories = ['Users', 'mike', 'docs'];
+let docsDirectory = directories.join(path.sep);
+console.log('문서 디렉터리 : %s', docsDirectory);
+
+let curPath = path.join('/Users/mike', 'notepad.exe')
+console.log('파일 경로 : %s', curPath)
+
+let filename = "C:\\Users\\mike\\notepad.exe";
+let dirname = path.dirname(filename);
+let basename = path.basename(filename);
+let extname = path.extname(filename);
+console.log('디렉터리 : %s, 파일 이름 : %s, 확장자 : %s', dirname, basename, extname);
+
+const fs = require('fs')
+
+fs.readFile('output.txt', 'utf-8', (err, data) => {
+    console.log(data)
+})
+const outputText = fs.readFileSync('output.txt', 'utf-8')
+console.log(outputText)
+
+const fs = require('fs')
+
+let text = "비동기 방식으로 파일쓰기 해서 쓴 제 이름입니다. -> 정연우"
+fs.writeFile('output.txt', text, 'utf-8', (err) => {
+    console.log('output.txt 파일에 데이터 쓰기 완료')
+} )
+
+*/
+
