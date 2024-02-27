@@ -58,3 +58,11 @@ console.log(randoms[i])
 }
 console.log(`제일 큰 수는 ${bigOfRandom(randoms)}입니다.`)
 */
+
+const crypto = require('crypto')
+const shaHash = crypto.createHash('sha256')
+shaHash.update('crypto_hash')
+
+let output = shaHash.digest('hex')
+
+console.log('crypto_hash :', output)
