@@ -161,6 +161,8 @@ fs.writeFile('output.txt', text, 'utf-8', (err) => {
 
 */
 
+/*
+   이벤트 연결
 // process 객체에 exit 이벤트 연결(exit은 노드실행 종료(함수 끝났을 때)시 자동으로 실행됨)
 process.on('exit', function(){
     console.log('안녕히가세요^^');
@@ -179,3 +181,64 @@ process.on('exit', function(){
    error.error.error();
    };
    setTimeout(test, 2000);
+*/
+
+/*
+이벤트 연결 개수 제한(기본적으로 10개)
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+
+// 이벤트 연결 개수 제한을 15개로 늘림
+process.setMaxListeners(15);
+// 이벤트 연결
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+process.on('exit', function(){ });
+
+*/
+
+/*
+process.on("uncaughtException", function (error) {
+    console.log("예외가 발생했군^^ 이번에만 봐주겠다!");
+   });
+   // 2초 간격으로 예외를 발생시킨다.
+   function test() {
+    setTimeout(test, 2000);
+    error.error.error();
+   }
+   setTimeout(test, 2000);
+*/
+
+// exit 이벤트를 연결한다
+
+/*
+이벤트 강제 발생
+process.on('exit', function(){
+ console.log('안녕히 계세요..!');
+});
+// 이벤트를 강제로 발생시킨다
+
+process.emit('exit');
+process.emit('exit');
+process.emit('exit');
+process.emit('exit');
+// 프로그램 실행중
+console.log('프로그램 실행중');
+*/
