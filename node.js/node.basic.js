@@ -247,3 +247,112 @@ console.log('프로그램 실행중');
 강제로 프로그램을 종료시키고 싶으면? exit()함수 사용
 */
 
+/*
+서버객체 생성 및 실행
+// 모듈 추출
+const http = require("http");
+// server 객체 생성
+const server = http.createServer();
+// 포트 설정
+const port = 3000;
+// 웹 서버 실행
+server.listen(port, function () {
+console.log("웹 서버가 시작되었습니다. : %d", port);
+});
+*/
+
+/*
+서버종료
+// 모듈 추출
+const http = require("http");
+// server 객체 생성
+const server = http.createServer();
+// 포트 설정
+const port = 3000;
+// 웹 서버 실행
+server.listen(port, function () {
+console.log("웹 서버가 시작되었습니다. : %d", port);
+});
+// 10초 후 실행
+let sclose = function(){
+// 서버 종료
+server.close();
+};
+setTimeout(sclose, 10000);
+*/
+
+/*
+HTML 내용 전달
+// 모듈 추출
+const http = require("http");
+// server 객체 생성
+const server = http.createServer();
+// 포트 설정
+const port = 3000;
+
+server.on("request", function (req, res) {
+console.log("Request On");
+res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+res.write("<!DOCTYPE html>");
+res.write("<html>");
+res.write("<head>");
+res.write("<title>응답 페이지</title>");
+res.write("</head>");
+res.write("<body>");
+res.write("<h1>Node.js로부터의 응답 페이지</h1>");
+res.write("</body>");
+res.write("</html>");
+res.end();
+});
+// 웹 서버 실행
+server.listen(port, function () {
+console.log("웹 서버가 시작되었습니다. : %d", port);
+})
+*/
+
+/*
+          HTML 페이지 제공
+// 모듈 추출
+const fs = require("fs");
+const http = require("http");
+// 서버 생성 및 실행
+http.createServer(function (request, response) {
+// HTML 파일을 읽기
+fs.readFile("htmlpage.html", function (error, data) {
+response.writeHead(200, { "Content-Type": "text/html" });
+response.end(data);
+});
+}).listen(3000, function () {
+console.log("Server Running at http://127.0.0.1:3000");
+});
+
+이미지, 음악 등의 파일을 제공하고 싶으면 응답 헤더의 두 번째 매개변수로 Content-Type을 MIME Type으로 설정
+즉 writeHead에 두 번째 매개변수로 Content-Type에 알맞는 MIME Type 설정
+
+특정 페이지로 강제 이동시키고 싶으면?
+응답 헤더의 두 번째 매개변수로 Location 속성을 사용해서 해당 페이지 주소 적기
+
+// 모듈 추출
+const http = require('http');
+// 서버 생성 및 실행
+http.createServer(function(request, response){
+response.writeHead(302, {'Location' : 'http://www.naver.com'});
+response.end();
+}).listen(3000, function(){
+console.log('Server Running at http://127.0.0.1:3000');
+});
+
+그렇다면 writeHead의 첫 번째 매개변수는 무엇인가? -> 상태 코드
+1xx는 처리 중 2xx는 성공 3xx는 리다이렉트 4xx는 클라이언트 오류 5xx는 서버오류
+
+// 모듈 추출
+const http = require('http');
+// 서버 생성 및 실행
+http.createServer(function(request, response){
+response.writeHead(404);
+response.end();
+}).listen(3000, function(){
+console.log('Server Running at http://127.0.0.1:3000');
+});
+*/
+
