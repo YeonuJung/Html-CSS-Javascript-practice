@@ -229,7 +229,9 @@ process.on("uncaughtException", function (error) {
 // exit 이벤트를 연결한다
 
 /*
-이벤트 강제 발생
+이벤트 강제 발생 -> 실제 이벤트가 발생하지는 않았지만 강제로 이벤트 리스너를 실행
+즉 exit 이벤트가 실제로 발생하진 않았음에도 이벤트 리스너를 강제로 실행하는 것이기 때문에
+프로그램이 종료되지는 않고 이벤트 리스너만 실행되는 것임.
 process.on('exit', function(){
  console.log('안녕히 계세요..!');
 });
@@ -241,4 +243,7 @@ process.emit('exit');
 process.emit('exit');
 // 프로그램 실행중
 console.log('프로그램 실행중');
+
+강제로 프로그램을 종료시키고 싶으면? exit()함수 사용
 */
+
