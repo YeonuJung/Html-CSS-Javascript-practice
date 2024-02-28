@@ -356,3 +356,155 @@ console.log('Server Running at http://127.0.0.1:3000');
 });
 */
 
+/*
+// 모듈 추출 및 서버 생성
+const express = require('express');
+const app = express();
+// 미들웨어 사용
+app.use(function(request, response, next) {
+console.log('미들웨어에서 요청을 처리함.');
+ response.send(“<h1>Express 서버에서 응답한 결과입니다.</h1>”);
+});
+app.listen(3000, function(){
+ console.log("Server Running at http://127.0.0.1:3000");
+});
+*/
+
+/*
+// 모듈 추출및 서버 생성
+const express = require('express');
+const app = express();
+// 미들웨어 설정 1
+app.use(function(request, response, next){
+ console.log("첫 번째 미들웨어");
+ next();
+});
+//미들웨어 설정 2
+app.use(function(request, response, next){
+ console.log("두 번째 미들웨어");
+ next();
+});
+//미들웨어 설정 3
+app.use(function(request, response, next){
+ console.log("세 번째 미들웨어");
+});
+app.listen(3000, function(){
+ console.log("Server Running at http://127.0.0.1:3000");
+});
+*/
+
+/*
+       미들웨어를 사용한 속성 추가
+// 모듈 추출 및 서버 생성
+const express = require('express');
+const app = express();
+//미들웨어 설정
+app.use(function(request, response, next){
+ // 데이터 추가
+ request.number = 2023;
+ response.number = 2024;
+ next();
+});
+app.use(function(request, response, next){
+ // 응답
+ response.send('<h1>' + request.number + ' : ' + response.number + '</h1>');
+});
+// 서버 실행
+app.listen(3000, function(){
+ console.log("Server Running at http://127.0.0.1:3000");
+});
+*/
+
+/* 파일 읽어서 응답
+//모듈 추출
+const express = require("express");
+const fs = require("fs");
+//서버 생성
+const app = express();
+app.use(function (request, response) {
+ fs.readFile("htmlpage.html", 'utf-8', function (error, data) {
+ // 응답 방법 2.
+ response.send(data); 
+ });
+});
+// 서버 실행
+app.listen(3000, function () {
+ console.log("Server Running at http://127.0.0.1:3000");
+});
+*/
+
+/* 데이터 생성해서 응답
+//모듈 추출
+const express = require('express');
+//서버 생성
+const app = express();
+app.use(function(request, response){
+ // 데이터 생성
+ const output = [];
+ 
+ for(let i=0; i<3; i++){
+ output.push({ count : i, name : 'name - ' + i});
+ }
+ // 응답
+ response.send(output);
+});
+// 서버 실행
+app.listen(3000, function(){
+ console.log("Server Running at http://127.0.0.1:3000");
+});
+*/
+
+/*
+상태코드 전달하고 싶으면 send 메서드 앞에 status메서드 사용
+상태코드만 전달하고 싶으면 status 메서드만 사용
+//모듈 추출
+const express = require('express');
+//서버 생성
+const app = express();
+//request 이벤트 리스너 설정
+app.use(function(request, response){
+ // 응답
+ response.status(404).send('<h1>ERROR</h1>');
+});
+// 서버 실행
+app.listen(3000, function(){
+ console.log("Server Running at http://127.0.0.1:3000");
+});
+*/
+
+/*
+          redirect메서드 -> 특정 경로로 이동시킬 수 있음
+//모듈 추출
+const express = require('express');
+//서버 생성
+const app = express();
+//request 이벤트 리스너 설정
+app.use(function(request, response){
+ // 응답
+ response.redirect("http://www.naver.com");
+});
+// 서버 실행
+app.listen(3000, function(){
+ console.log("Server Running at http://127.0.0.1:3000");
+});
+*/
+
+/*
+        요청 객체의 query 속성을 사용하여 get 방식으로 전송한 요청 파라미터 확인
+        post 방식으로 전송한 요청 파라미터는 body 속성 사용
+//모듈 추출
+const express = require("express");
+//서버 생성
+const app = express();
+// 미들웨어 설정
+app.use(function(request, response){
+ let name = request.query.name;
+ let region = request.query.region;
+ // 응답
+response.send('<h1>' + name + '-' + region + '</h1>');
+});
+// 서버 실행
+app.listen(3000, function(){
+ console.log("Server Running at http://127.0.0.1:3000");
+});
+*/
