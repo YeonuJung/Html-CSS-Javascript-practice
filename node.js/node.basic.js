@@ -23,8 +23,6 @@ console.timeEnd('duration_sum')
 console.log('1부터 1000까지 더한 값 : %d', num)
 */
 
-
-
 /*
 console.log('argv 속성의 파라미터 수 : %d', process.argv.length)
 process.argv.forEach(function(item, index){
@@ -507,4 +505,97 @@ response.send('<h1>' + name + '-' + region + '</h1>');
 app.listen(3000, function(){
  console.log("Server Running at http://127.0.0.1:3000");
 });
+*/
+
+/* body-parser 미들웨어 -> post 방식의 본문 데이터 추출
+   static 미들웨어 -> 웹서버에서 파일 제공하는 역할 담당
+   즉 서버의 특정 폴더의 파일들을 클라이언트가 특정 경로로 바로 접근할 수 있도록 해줌
+
+//모듈 추출 및 서버 생성
+const express = require("express");
+const app = express();
+
+// public 폴더를 웹 서버의 루트 경로로 접근할 수 있도록 지정(static 미들웨어)
+app.use(express.static(__dirname + "/public"));
+
+// application/x-www-form-urlencoded 방식 파싱(body-parser 미들웨어)
+app.use(express.urlencoded({ extended: false }));
+
+app.use(function (request, response, next) {
+let paramId = request.body.id;
+let paramPw = request.body.password;
+response.send("<h1>ID : " + paramId + "<br>PW : " + paramPw + "</h1>");
+});
+// 서버 실행
+app.listen(3000, function () {
+console.log("Server Running at http://127.0.0.1:3000");
+});
+*/
+
+/*
+//모듈 추출 및 서버 생성
+const express = require("express");
+const app = express();
+
+// public 폴더를 웹 서버의 루트 경로로 접근할 수 있도록 지정(static 미들웨어)
+app.use(express.static(__dirname + "/public"));
+
+// application/x-www-form-urlencoded 방식 파싱(body-parser 미들웨어)
+app.use(express.urlencoded({ extended: false }));
+
+app.get("/", function (request, response){
+    response.redirect("login.html")
+});
+
+app.post("/login.html", function (request, response){
+    let paramId = request.body.id;
+    let paramPw = request.body.password;
+
+    response.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+    response.write("<h1>로그인 페이지에서 응답한 결과</h1>");
+    response.write("<hr>");
+    response.write("<p>ID : " + paramId + "</p>");
+    response.write("<p>PW : " + paramPw + "</p>");
+    response.send();
+})
+
+// 서버 실행
+app.listen(3000, function () {
+    console.log("Server Running at http://127.0.0.1:3000");
+});
+
+*/
+
+/*
+//모듈 추출 및 서버 생성
+const express = require("express");
+const app = express();
+
+// public 폴더를 웹 서버의 루트 경로로 접근할 수 있도록 지정(static 미들웨어)
+app.use(express.static(__dirname + "/public"));
+
+// application/x-www-form-urlencoded 방식 파싱(body-parser 미들웨어)
+app.use(express.urlencoded({ extended: false }));
+
+app.get("/", function (request, response){
+    response.redirect("join.html")
+});
+
+app.post("/join.html", function (request, response){
+    let paramName = request.body.name;
+    let paramAddress = request.body.address;
+
+    response.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+    response.write("<h1>회원가입 페이지에서 응답한 결과</h1>");
+    response.write("<hr>");
+    response.write("<p>Name : " + paramName + "</p>");
+    response.write("<p>Address : " + paramAddress + "</p>");
+    response.send();
+})
+
+// 서버 실행
+app.listen(3000, function () {
+    console.log("Server Running at http://127.0.0.1:3000");
+});
+
 */
