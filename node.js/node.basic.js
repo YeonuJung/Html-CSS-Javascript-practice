@@ -1,4 +1,3 @@
-
 // const http = require('http')
 // http.createServer(function(request, response){
 //     response.writeHead(200, {'Content-Type' : 'text/html'});
@@ -532,7 +531,7 @@ console.log("Server Running at http://127.0.0.1:3000");
 });
 */
 
-/*
+/*       router 미들웨어
 //모듈 추출 및 서버 생성
 const express = require("express");
 const app = express();
@@ -566,7 +565,7 @@ app.listen(3000, function () {
 
 */
 
-/*
+/*           router 미들웨어 
 //모듈 추출 및 서버 생성
 const express = require("express");
 const app = express();
@@ -598,4 +597,39 @@ app.listen(3000, function () {
     console.log("Server Running at http://127.0.0.1:3000");
 });
 
+*/ 
+
+/*
+ //간단한 로그인 로직 실현해보기
+const express = require("express");
+const app = express();
+let userId = "jjjj1234";
+let userPw = 12341234;
+
+// public 폴더를 웹 서버의 루트 경로로 접근할 수 있도록 지정(static 미들웨어)
+app.use(express.static(__dirname + "/public"));
+
+// application/x-www-form-urlencoded 방식 파싱(body-parser 미들웨어)
+app.use(express.urlencoded({ extended: false }));
+
+app.get("/", function (request, response) {
+  response.redirect("login.html");
+});
+
+app.post("/login.html", function (request, response) {
+  let paramId = request.body.id;
+  let paramPw = request.body.password;
+
+  if (paramId == userId && paramPw == userPw) {
+    response.send("<h1>로그인 : 로그인되었습니다.</h1>");
+  } else {
+    response.send("<h1>아이디, 비번 다시 확인하세요.</h1>");
+  }
+
+});
+
+// 서버 실행
+app.listen(3000, function () {
+  console.log("Server Running at http://127.0.0.1:3000");
+});
 */
