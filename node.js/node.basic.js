@@ -672,15 +672,21 @@ console.log("Server Running at http://127.0.0.1:3000");
 const express = require('express');
 const session = require('express-session');
 const app = express();
+
 // express-session 미들웨어 설정
 app.use(session({
 secret : 'secret key',
 resave : false,
 saveUninitialized : true
 }));
-// 세션 설정
+
 app.get("/", function (request, response) {
+// 세션 설정 : request.session.세션이름 = 세션객체
+request.session.now = new Date().toString();
+// 응답
+response.send(request.session);
 });
+
 // 서버 실행
 app.listen(3000, function(){
 console.log("Server Running at http://127.0.0.1:3000");
