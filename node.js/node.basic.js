@@ -692,3 +692,49 @@ app.listen(3000, function(){
 console.log("Server Running at http://127.0.0.1:3000");
 });
 */
+
+/*
+const express = require("express");
+const path = require("path");
+const app = express();
+// view 엔진 설정
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
+app.get("/", function (request, response) {
+ response.render("basic");
+});
+// 서버 실행
+app.listen(3000, function () {
+ console.log("Server Running at http://127.0.0.1:3000");
+})
+*/
+
+//모듈 추출
+const express = require("express");
+const mysql = require("mysql2");
+// 서버 생성
+const app = express();
+// connection 객체 생성
+const connection = mysql.createConnection({
+ user: "root",
+ password: "root",
+ database: "bookDB",
+ port: 3306,
+});
+// 데이터베이스 연결
+connection.connect();
+
+// 데이터베이스 쿼리 사용
+connection.query("SELECT * FROM newbooktable", function (error, result, fields) {
+    if (error) {
+    console.log("쿼리 문장에 오류가 있습니다.");
+    console.log(error); 
+    } else {
+    console.log(result);
+    }
+   });
+   
+// 서버 실행
+app.listen(3000, function () {
+ console.log("Server Running at http://127.0.0.1:3000");
+});
